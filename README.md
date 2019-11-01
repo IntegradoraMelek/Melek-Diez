@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿
 =======
 ﻿# Melek-Diez
+=======
+ ﻿# Melek-Diez
+>>>>>>> aadae45b2362f4d3175893413f98e9ba9d49d87f
 
 vato te pasaste de lanza 
 Trabajo de ramiro
