@@ -7,4 +7,3 @@ ya hablele a su morra isaac
 TE AMO SARA. ATTE ISAC
 
 Ella no te ama
-
