@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="paneladmin.css">
+    <title>Panel de Administrador</title>
+</head>
+<body>
+    
+<div class="containerform">
+    <form method="POST" action="altaproducto.php">
+            <div class="form-group">
+                    <label for="nombre">Example label</label>
+                    <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre">
+                  </div>
+                  <div class="form-group">
+                    <label for="color">Another label</label>
+                    <input type="text" class="form-control" name="color" id="color" placeholder="Color">
+                  </div>
+        
+        <div class="form-group">
+          <label for="categoria">Categoria</label>
+          <select class="form-control" id="categoria">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+       
+        <div class="form-group">
+          <label for="descripcion">Descripcion</label>
+          <textarea class="form-control" name="descripcion" id="descripcion" rows="3"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
+      </form>
+    </div>
+</body>
+</html>
