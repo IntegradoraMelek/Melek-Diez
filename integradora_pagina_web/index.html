@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
     <a href="https://icons8.com/icon/13912/color"></a>
     <a href="https://icons8.com/icon/13963/twitter"></a>
     <link rel="stylesheet" href="CSS PAG/estilos.css">
@@ -17,8 +16,8 @@
 </head>
 <body>
 
-    <div id="image" style="background-image: url('550393.jpg'); width: 100%; height: 650px;">
-      <div class="container">
+    
+      <div class="container-fluid" style="background-image: url('550393.jpg'); width: 100%; height: 700px; ">
         <nav id="barra" class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand " href="#"><span class="resaltado"> MELEK</span>DIEZ</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,18 +31,27 @@
                 <li class="nav-item">
                   <a class="nav-link" href="paginas/contac.html">Ubicacion</a>
                 </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <li class="nav-item">
+                  <a class="nav-link" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                     Pedidos
                   </a>
                 </li>
               </ul>
               <ul class="navbar-nav ml-auto nav-flex-icons">
                 <li class="nav-item dropdown ">
-                  <a class="nav-link dropdown-toggle icon-torso" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-user"></i>
-                  </a>
+                  <ul class="navbar-nav ml-auto nav-flex-icons">
+                    <li class="nav-item dropdown ">
+                      <a class="nav-link dropdown-toggle icon-torso" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-default"
+                        aria-labelledby="navbarDropdownMenuLink-333">
+                        <a class="dropdown-item" href="login.html">Iniciar sesion</a>
+                        <a class="dropdown-item" href="registro.html">Registrase</a>
+                      </div>
+                    </li>
+                  </ul> 
                   <div class="dropdown-menu dropdown-menu-right dropdown-default"
                     aria-labelledby="navbarDropdownMenuLink-333">
                     <a class="dropdown-item" href="login.html">Iniciar sesion</a>
@@ -54,7 +62,11 @@
             </div>
         </nav>
         <div class="container">
-          <h1 style="text-align: center; margin-top: 200px; font-size: 100px;"><span class="resaltado">Bien</span>venido</h1>          
+          <div class="row">
+            <div class="d-none d-sm-none d-md-block ">
+              <h1 id="bienvenido" style="margin-top: 200px; font-size: 100px;"><span class="resaltado">Bien</span>venido</h1>          
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -64,100 +76,120 @@
       </div>
     </div>
 
-    
-
     <div class="container" >
-      <div class="card-deck" style="margin-bottom: 20px; margin-top: 30px;">
-          <div class="card">
-            <img src="img/Nigeria.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Nigeria</h5>
-            </div>
-            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">
-            Mas informacion...
-              </button>
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Uniforme de nigeria</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, quia?
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
-              </div>
-            </div>
-           </div>
-          </div>
-          </div>
+      <div class="card-deck" style="margin-bottom: 20px; margin-top: 100px;">
 
-          <div class="card">
-            <img src="img/Playboy.jpg" class="card-img-top" alt="...">
+      <div class="card text-center text-white border-dark">
+            <div class="card-header bg-dark">
+                <h5 class="card-title">Nigeria</h5>
+            </div>
             <div class="card-body">
+                <img src="img/Nigeria.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-footer bg-dark">
+                <button type="button" data-toggle="popover" data-container="body" title="Uniforme de nigeria" data-placement="right" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet libero et justo placerat lobortis non in sapien. Proin imperdiet odio et diam tristique, vitae facilisis odio posuere. Aliquam volutpat sodales mollis. Vestibulum rutrum ante in ex gravida, in viverra tellus aliquet. Nunc eu arcu at sapien tristique maximus." class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
+                    Mas informacion...
+                </button>
+                <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
+                    Buy  
+                </button> 
+            </div>
+      </div>
+            
+                  
+      <div class="card text-white text-center border-dark">
+            <div class="card-header bg-dark">
               <h5 class="card-title">Play-Boy</h5>
             </div>
-            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal2">
-            Mas informacion...
-              </button>
-            <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Uniforme Play-Boy</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, quia?
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-success" data-dismiss="modal">Cerrar</button>
-              </div>
-            </div>
-           </div>
-          </div>
-          </div>
-
-          <div class="card">
-            <img src="img/wolves.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">PornHub</h5>
+                <img src="img/Playboy.jpg" class="card-img-top" alt="...">
             </div>
-              <a href="#" class="btn btn-dark">Mas informacion...</a>         
-          </div>
-        </div>
-    </div>
-    <div class="container" style="margin-bottom: 100px;">
-        <div class="card-deck" style="margin-bottom: 20px;">
-            <div class="card">
-              <img src="img/homaraña.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Hombre araña</h5>
-              </div>
-              <a href="#" class="btn btn-dark">Mas informacion...</a>
+            <div class="card-footer bg-dark">
+                <button type="button" data-toggle="tooltip" data-placement="bottom" title="Uniforme Play-Boy" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
+                    Mas informacion...
+                </button>
+                <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
+                    Buy  
+                </button> 
             </div>
-            <div class="card">
-              <img src="img/spurs.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Tottenham</h5>
-              </div>
-              <a href="#" class="btn btn-dark">Mas informacion...</a>
-            </div>
-            <div class="card">
-              <img src="img/MexVerde.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Mexico</h5>
-              </div>
-                <a href="#" class="btn btn-dark">Mas informacion...</a>         
-            </div>
-          </div>
       </div>
+
+      <div class="card text-white text-center border-dark">
+          <div class="card-header bg-dark">
+            <h5 class="card-title">Mexico</h5>
+          </div>
+          <div class="card-body">
+              <img src="img/mexico-verde-copy-300x446.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="card-footer bg-dark">
+              <button type="button" data-toggle="tooltip" data-placement="bottom" title="Uniforme de Nigeria" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
+                  Mas informacion...
+              </button>
+              <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
+                  Buy  
+              </button> 
+          </div>
+    </div>
+
+    </div>
+    </div>
+
+    <div class="container" style="margin-bottom: 100px; margin-top: 100px;">
+
+        <div class="card-deck" style="margin-bottom: 20px;">
+            <div class="card text-white text-center border-dark">
+                <div class="card-header bg-dark">
+                  <h5 class="card-title">Spurs</h5>
+                </div>
+                <div class="card-body">
+                    <img src="img/spurs.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card-footer bg-dark">
+                    <button type="button" data-toggle="tooltip" data-placement="bottom" title="Uniforme de Nigeria" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
+                        Mas informacion...
+                    </button>
+                    <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
+                        Buy  
+                    </button> 
+                </div>
+          </div>
+          
+          <div class="card text-white text-center border-dark">
+              <div class="card-header bg-dark">
+                <h5 class="card-title">Wolves</h5>
+              </div>
+              <div class="card-body">
+                  <img src="img/wolves.jpg" class="card-img-top" alt="...">
+              </div>
+              <div class="card-footer bg-dark">
+                  <button type="button" data-toggle="tooltip" data-placement="bottom" title="Uniforme de Nigeria" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
+                      Mas informacion...
+                  </button>
+                  <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
+                      Buy  
+                  </button> 
+              </div>
+        </div>
+
+        <div class="card text-white text-center border-dark">
+            <div class="card-header bg-dark">
+              <h5 class="card-title">Play-Boy</h5>
+            </div>
+            <div class="card-body">
+                <img src="img/Playboy.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-footer bg-dark">
+                <button type="button" data-toggle="tooltip" data-placement="bottom" title="Uniforme de Nigeria" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
+                    Mas informacion...
+                </button>
+                <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
+                    Buy  
+                </button> 
+            </div>
+      </div>
+          </div>
+    </div>
+    </div>
 
     <footer class="page-footer font-small unique-color-dark" >
 <div style="background-color: #188a3a;">
@@ -211,6 +243,20 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 <script>
+  $(document).ready(function () {
+      $('[data-toggle="tooltip"]').tooltip();
+      $(function () {
+      $('[data-toggle="popover"]').popover()
+  })
+  });
+</script>
+<script>
+    window.sr = ScrollReveal();
+    sr.reveal('#bienvenido',{
+        duration: 2000,
+        distance: '300px',
+        origin: 'right'
+    });
     window.sr = ScrollReveal();
     sr.reveal('#barra',{
         duration: 2000,
