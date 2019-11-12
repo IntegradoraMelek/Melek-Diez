@@ -11,25 +11,24 @@
     <link rel="stylesheet" href="CSS PAG/estilos.css">
     <link rel="stylesheet" href="styles.css">
     <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="CSS PAG/hover.css">
     <title>MELEK DIEZ</title>
     
 </head>
 <body>
-
-    
-      <div class="container-fluid" style="background-image: url('550393.jpg'); width: 100%; height: 700px; ">
-        <nav id="barra" class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand " href="#"><span class="resaltado"> MELEK</span>DIEZ</a>
+    <header class="header shadow" style="background-image: url('658972.jpg');">
+        <nav id="barra" class="navbar navbar-expand-lg navbar-dark" style="font-size: 20px;">
+            <h1 id="melek" class="text-white" ><span class="resaltado" >MELEK</span>DIEZ</h1>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
-              <ul class="navbar-nav">
+              <ul class="navbar-nav m-auto">
                 <li class="nav-item active">
                   <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="paginas/contac.html">Ubicacion</a>
+                  <a class="nav-link" href="contac.html">Ubicacion</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#" role="button" aria-haspopup="true" aria-expanded="false">
@@ -59,185 +58,129 @@
                   </div>
                 </li>
               </ul> 
-            </div>
+            </div>        
         </nav>
-        <div class="container">
-          <div class="row">
-            <div class="d-none d-sm-none d-md-block ">
-              <h1 id="bienvenido" style="margin-top: 200px; font-size: 100px;"><span class="resaltado">Bien</span>venido</h1>          
+        <h1 class="text-center" id="bienvenido" style="margin-top: 200px; font-size: 8vw; color: white;">Bienvenido</h1>
+      </header>
+    
+    <div class="container mt-5">
+      <div class="card-deck text-center">
+        <div class="card shadow p-3 mb-5 bg-white rounded">
+            <div class="image-box">
+                <img src="img/Nigeria.jpg" alt="Unsplashed Random" class="card-img-top" style="width: 300px;"/>
+              </div>
+          <hr class="bg-dark" style="padding: 1px;">
+            <div class="card-body">
+              <h5 class="card-title">Nigeria</h5>
             </div>
+        </div>
+      <div class="card  shadow p-3 mb-5 bg-white rounded">
+          <div class="image-box">
+              <img src="img/homaraña.jpg" alt="Unsplashed Random" class="card-img-top"/>
+            </div>
+          <hr class="bg-dark" style="padding: 1px;">
+          <div class="card-body">
+            <h5 class="card-title">Hombre araña</h5>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div style="background-color: #188a3a; padding: 25px;">
-      <div class="container">
-      </div>
-    </div>
-
-    <div class="container" >
-      <div class="card-deck" style="margin-bottom: 20px; margin-top: 100px;">
-
-      <div class="card text-center text-white border-dark">
-            <div class="card-header bg-dark">
-                <h5 class="card-title">Nigeria</h5>
+      <div class="card  shadow p-3 mb-5 bg-white rounded hoverable">
+          <div class="image-box">
+              <img src="img/MexVerde.jpg" alt="Unsplashed Random" class="card-img-top"/>
             </div>
-            <div class="card-body">
-                <img src="img/Nigeria.jpg" class="card-img-top" alt="...">
-            </div>
-            <div class="card-footer bg-dark">
-                <button type="button" data-toggle="popover" data-container="body" title="Uniforme de nigeria" data-placement="right" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet libero et justo placerat lobortis non in sapien. Proin imperdiet odio et diam tristique, vitae facilisis odio posuere. Aliquam volutpat sodales mollis. Vestibulum rutrum ante in ex gravida, in viverra tellus aliquet. Nunc eu arcu at sapien tristique maximus." class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
-                    Mas informacion...
-                </button>
-                <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
-                    Buy  
-                </button> 
-            </div>
-      </div>
-            
-                  
-      <div class="card text-white text-center border-dark">
-            <div class="card-header bg-dark">
-              <h5 class="card-title">Play-Boy</h5>
-            </div>
-            <div class="card-body">
-                <img src="img/Playboy.jpg" class="card-img-top" alt="...">
-            </div>
-            <div class="card-footer bg-dark">
-                <button type="button" data-toggle="tooltip" data-placement="bottom" title="Uniforme Play-Boy" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
-                    Mas informacion...
-                </button>
-                <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
-                    Buy  
-                </button> 
-            </div>
-      </div>
-
-      <div class="card text-white text-center border-dark">
-          <div class="card-header bg-dark">
+          <hr class="bg-dark" style="padding: 1px;">
+          <div class="card-body">
             <h5 class="card-title">Mexico</h5>
           </div>
-          <div class="card-body">
-              <img src="img/mexico-verde-copy-300x446.jpg" class="card-img-top" alt="...">
-          </div>
-          <div class="card-footer bg-dark">
-              <button type="button" data-toggle="tooltip" data-placement="bottom" title="Uniforme de Nigeria" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
-                  Mas informacion...
-              </button>
-              <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
-                  Buy  
-              </button> 
-          </div>
-    </div>
-
-    </div>
-    </div>
-
-    <div class="container" style="margin-bottom: 100px; margin-top: 100px;">
-
-        <div class="card-deck" style="margin-bottom: 20px;">
-            <div class="card text-white text-center border-dark">
-                <div class="card-header bg-dark">
-                  <h5 class="card-title">Spurs</h5>
-                </div>
-                <div class="card-body">
-                    <img src="img/spurs.jpg" class="card-img-top" alt="...">
-                </div>
-                <div class="card-footer bg-dark">
-                    <button type="button" data-toggle="tooltip" data-placement="bottom" title="Uniforme de Nigeria" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
-                        Mas informacion...
-                    </button>
-                    <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
-                        Buy  
-                    </button> 
-                </div>
-          </div>
-          
-          <div class="card text-white text-center border-dark">
-              <div class="card-header bg-dark">
-                <h5 class="card-title">Wolves</h5>
-              </div>
-              <div class="card-body">
-                  <img src="img/wolves.jpg" class="card-img-top" alt="...">
-              </div>
-              <div class="card-footer bg-dark">
-                  <button type="button" data-toggle="tooltip" data-placement="bottom" title="Uniforme de Nigeria" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
-                      Mas informacion...
-                  </button>
-                  <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
-                      Buy  
-                  </button> 
-              </div>
         </div>
+      </div>
+    </div>
 
-        <div class="card text-white text-center border-dark">
-            <div class="card-header bg-dark">
-              <h5 class="card-title">Play-Boy</h5>
-            </div>
+    <div class="container mt-5">
+        <div class="card-deck text-center">
+          <div class="card shadow p-3 mb-5 bg-white rounded">
+              <div class="image-box">
+                  <img src="img/spurs.jpg" alt="Unsplashed Random" class="card-img-top" style="width: 300px;"/>
+                </div>
+            <hr class="bg-dark" style="padding: 1px;">
             <div class="card-body">
-                <img src="img/Playboy.jpg" class="card-img-top" alt="...">
+              <h5 class="card-title">Spurs</h5>
             </div>
-            <div class="card-footer bg-dark">
-                <button type="button" data-toggle="tooltip" data-placement="bottom" title="Uniforme de Nigeria" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
-                    Mas informacion...
-                </button>
-                <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
-                    Buy  
-                </button> 
-            </div>
-      </div>
           </div>
-    </div>
-    </div>
+        <div class="card shadow p-3 mb-5 bg-white rounded">
+            <div class="image-box">
+                <img src="img/wolves.jpg" alt="Unsplashed Random" class="card-img-top"/>
+              </div>
+            <hr class="bg-dark" style="padding: 1px;">
+            <div class="card-body">
+              <h5 class="card-title">Wolves</h5>
+            </div>
+          </div>
+        <div class="card shadow p-3 mb-5 bg-white rounded">
+            <div class="image-box">
+                <img src="img/Nigeria.jpg" alt="Unsplashed Random" class="card-img-top" style="width: 300px;"/>
+              </div>
+            <hr class="bg-dark" style="padding: 1px;">
+            <div class="card-body">
+              <h5 class="card-title">Nigeria</h5>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <footer class="page-footer font-small unique-color-dark" >
-<div style="background-color: #188a3a;">
-  <div class="container">
-    <div class="row py-4 d-flex align-items-center">
-      <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-        <h6 class="mb-0">
-          ¡Conéctate con nosotros en las redes sociales!</h6>
+    <div class="mt-5 mb-5" style="display: flex; justify-content: center;">
+      <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group mr-5 shadow rounded" role="group" aria-label="First group">
+          <button class="btn btn-dark btn-rounded">1</button>
+          <button class="btn btn-dark btn-rounded">2</button>
+          <button class="btn btn-dark btn-rounded">3</button>
+          <button class="btn btn-dark btn-rounded">4</button>
+          <button class="btn btn-dark btn-rounded">5</button>
+          <button class="btn btn-dark btn-rounded">6</button>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-<div class="container text-center text-md-left mt-5">
-  <div class="row mt-3">
-    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-      <h6 class="text-uppercase font-weight-bold">Melek Diez</h6>
-      <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-      <p>Somos una compania altamente responsable,<br>
-        donde damos un excelente servicio y calidad  <br>
-        ante nuestros clientes.</p>
-    </div>
-    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-      <h6 class="text-uppercase font-weight-bold">Redes sociales</h6>
-      <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-      <p>
-        <img src="https://img.icons8.com/color/48/000000/facebook.png"><a href="#!">Facebook</a>
-      </p>
-      <p>
-        <img src="https://img.icons8.com/color/26/000000/twitter.png"><a href="#!">Twitter</a>
-      </p>
-    </div>
-    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-      <h6 class="text-uppercase font-weight-bold">Contacto</h6>
-      <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-      <label>Direccion: <br> Privada Cuicuilco #599,
-      esquina con calzada Xicotencatl</label>
-      <label>Telefonos: <br> 
-      +87-11-44-68-84 y 7-20-66-25</label>  
-      <label>Correo: melekdiez@hotmail.com</label>
-    </div>
-  </div>
-</div>
-<div class="footer-copyright text-center py-3">© 2019 Copyright:
-  <a href="#"> MELEK DIEZ</a>
-</div>
-    </footer>    
+    
+      <footer class="page-footer font-small unique-color-dark" >
+            <div class="container">
+              <div class="row d-flex align-items-center">
+              </div>
+            </div>
+          <div class="container text-center text-md-left mt-5">
+            <div class="row mt-3">
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <h6 class="text-uppercase font-weight-bold text-center">Melek Diez</h6>
+                <hr class="bg-white" style="padding: 1px;">
+                <p>Somos una compania altamente responsable,<br>
+                  donde damos un excelente servicio y calidad  <br>
+                  ante nuestros clientes.</p>
+              </div>
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h6 class="text-uppercase font-weight-bold text-center">Redes sociales</h6>
+                <hr class="bg-white" style="padding: 1px;">
+                <p>
+                  <img src="https://img.icons8.com/color/48/000000/facebook.png"><a href="#!" style="text-decoration: none;">Facebook</a>
+                </p>
+                <p>
+                  <img src="https://img.icons8.com/color/26/000000/twitter.png"><a href="#!" style="text-decoration: none;">Twitter</a>
+                </p>
+              </div>
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <h6 class="text-uppercase font-weight-bold text-center">Contacto</h6>
+                <hr class="bg-white" style="padding: 1px;">
+                Direccion:
+                <br> Privada Cuicuilco #599,
+                esquina con calzada Xicotencatl <br>
+                Telefonos: <br> 
+                +87-11-44-68-84 y 7-20-66-25
+                Correo: melekdiez@hotmail.com
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright text-center py-3 bg-dark">© 2019 Copyright:
+            <a href="#" style="text-decoration: none;"> MELEK DIEZ</a>
+          </div>
+        </footer>  
       
-
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -264,9 +207,10 @@
         distance: '300px'
     });
     window.sr = ScrollReveal();
-    sr.reveal('#image',{
+    sr.reveal('#melek',{
         duration: 2000,
         origin: 'right',
+        distance: '300px'
     });
 </script>
 

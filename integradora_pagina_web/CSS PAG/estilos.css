@@ -4,6 +4,28 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+.header {
+  
+  background-size: cover;
+  min-height: 100vh;
+}
+.header .navbar {
+  background-color: transparent !important;
+}
+.header2 {
+
+  background-size: cover;
+  min-height: 100vh;
+}
+.header2 .navbar {
+  background-color: transparent !important;
+}
+.navbar-nav.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+}
+
 .resaltado{
     color: #188a3a;
 }
@@ -71,6 +93,7 @@ footer
     margin-top: 9px;
     margin-left: 9px;
 }
+
 .fa {
     padding: 10px;
     font-size: 20px;
