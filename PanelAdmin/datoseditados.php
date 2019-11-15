@@ -17,7 +17,7 @@ color = ?, descripcion = ? where id_producto = ?;';
 
 $res = $conn->prepare($query);
 
-$res = $query->execute([$nombre, $color, $descripcion]);
+$res->execute([$nombre, $color, $descripcion, $id]);
 
 print_r($res->errorInfo());
 

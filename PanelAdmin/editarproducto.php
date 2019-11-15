@@ -60,11 +60,18 @@ $producto = $res->fetch(PDO::FETCH_OBJ);
             <option>5</option>
           </select>
         </div>
-       
+
         <div class="form-group">
-          <label for="descripcion">Descripcion</label>
-          <input value="<?php echo $producto->descripcion ?>" class="form-control" name="descripcion" id="descripcion" rows="3">
-        </div>
+    <label for="descripcion">Descripcion</label>
+    <textarea class="form-control" id="descripcion" name="descripcion" rows="3"><?php echo $producto->descripcion ?></textarea>
+  </div>
+       
+        <!-- <div class="form-group"> -->
+          <!-- <label for="descripcion">Descripcion</label> -->
+          <!-- <input value="" class="form-control" name="descripcion" id="descripcion" rows="3"> -->
+        <!-- </div> -->
+
+       
 
         <button type="submit" class="btn btn-primary mb-2">Guardar cambios</button>
       </form>
