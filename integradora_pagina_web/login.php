@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Inicio de Sesión</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="CSS PAG\estilos.css">
@@ -43,8 +43,8 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-default"
                       aria-labelledby="navbarDropdownMenuLink-333 shadow">
-                      <a class="dropdown-item" href="login.html">Iniciar sesion</a>
-                      <a class="dropdown-item" href="registro.html">Registrase</a>
+                      <a class="dropdown-item" href="login.php">Iniciar sesion</a>
+                      <a class="dropdown-item" href="registro.php">Registrase</a>
                     </div>
                   </li>
                 </ul> 
@@ -61,22 +61,20 @@
     <div class="row justify-content-center">
         <div class="card" style="margin-top: 50px; width: 350px; height: 420px; background-color: rgb(0,0,0,0.4); color: white;">
             <div class="card-body">
-            <form action="" method="POST">
+            <form action="php/consesion.php" method="POST">
               <div class="text-center">
                 <label style="font-size: 30px; margin-bottom: 25px;">Inicia sesión</label>
               </div>
               <div class="form-group">
                   <label for="exampleInputEmail1">Correo electronico</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="correo" placeholder="Correo electronico">
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="correo_electronico" placeholder="Correo electronico">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Contraseña</label>
                   <input type="password" class="form-control" id="exampleInputPassword1" name="contrasena" placeholder="Contraseña">
                 </div>
                 <div class="text-center">
-                  <button type="submit" class="btn btn-primary">
-                      <a href="index.html" style="color: white; text-decoration: none;">Iniciar Sesion</a>
-                  </button>
+                  <button type="submit" class="btn btn-primary" style="color: white; text-decoration: none;">Iniciar Sesion</button>
                 </div>
               </form>
             </div>
