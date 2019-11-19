@@ -1,16 +1,15 @@
 <?php
 namespace clases_pdo;
 
-require_once 'conexion.php';
+require_once '../PanelAdmin/conexion.php';
 
 class User{
     
     private $id = '';
     private $nombre;
-    private $apellido;
-    private $correo;
+    private $correo_electronico;
+    private $telefono;
     private $contrasena;
-    private $rol = '1';
     private $pdo;
     
     public function __construct(){
@@ -18,11 +17,11 @@ class User{
     }
     
     
-    public function agregarUsuario($nombre, $apellido,$correo,$contrasena)
+    public function agregarUsuario($nombre,$correo_electronico,$telefono,$contrasena)
     {   
         $this->nombre = $nombre;
-        $this->apellido = $apellido;
-        $this->correo = $correo;
+        $this->correo_electronico = $correo_electronico;
+        $this->telefono = $telefono;
         $this->contrasena = $contrasena;
         $result = $this->saveUser();
         return $result;
@@ -31,15 +30,14 @@ class User{
     private function saveUser()
     {
         $pdo = $this->pdo;
-        $sql = "INSERT INTO usuario (id_Per,correo,contrasena,nombres,apellido,rol) VALUES (:id,:correo,:contrasena,:nombre,:apellido,:rol)";
+        $sql = "INSERT INTO usuario (id_usuario,nombre,correo_electronico,telefono,contrasena) VALUES (:id,:nombre,:correo_electronico,:telefono,:contrasena)";
         $query = $pdo->prepare($sql);
         $result = $query->execute([
-            'id' => $this->id,
+            'id_usuario' => $this->id,
             'nombre' => $this->nombre,
-            'apellido' => $this->apellido,
-            'correo' => $this->correo,
-            'contrasena' => $this->contrasena,
-            'rol' => $this->rol
+            'correo_electronico' => $this->correo_electronico,
+            'telefono' => $this->telefono,
+            'contrasena' => $this->contrasena
             ]);
         return $result;
     }
@@ -48,7 +46,7 @@ class User{
     public function getUsers()
     {
       $pdo = $this->pdo;
-      $sql = "SELECT * FROM Usuario";
+      $sql = "SELECT * FROM usuario";
       $query = $pdo->query($sql);
       $queryResult = $query->fetchAll(\PDO::FETCH_ASSOC);
       return $queryResult;
@@ -58,10 +56,10 @@ class User{
     public function deleteUser($id)
     {
         $pdo = $this->pdo;
-        $sql = "DELETE FROM  Usuario WHERE Id=:id";
+        $sql = "DELETE FROM  Usuario WHERE id_usuario=:id";
         $query = $pdo->prepare($sql);
         $result = $query->execute([
-            'id' => $id
+            'id_usuario' => $id
             ]);
             
         return $result;
@@ -72,7 +70,7 @@ class User{
     public function selectUser($id)
     {
         $pdo = $this->pdo;
-        $sql = "SELECT * FROM Usuario WHERE Id =".$id;
+        $sql = "SELECT * FROM usuario WHERE id_usuario =".$id;
         $query = $pdo->query($sql);
         $queryResult = $query->fetchAll(\PDO::FETCH_ASSOC);
         return $queryResult;
@@ -81,10 +79,10 @@ class User{
     public function updateUser($id, $nombre, $telefono, $usuario, $contra)
     {
         $pdo = $this->pdo;
-        $sql = "UPDATE Usuario SET Name = :nombre, Phone = :telefono, User = :usuario, Password = :contra WHERE Id = :id";
+        $sql = "UPDATE usuario SET Name = :nombre, Phone = :telefono, User = :usuario, Password = :contra WHERE id_usuario = :id";
         $query = $pdo->prepare($sql);
         $result = $query->execute([
-            'id' => $id,
+            'id_usuario' => $id,
             'nombre' => $nombre,
             'telefono' => $telefono,
             'usuario' => $usuario,
@@ -97,10 +95,10 @@ class User{
     public function selectVali($correo)
     {
         $pdo = $this->pdo;
-        $sql = "SELECT * FROM Usuario WHERE correo = :correo";
+        $sql = "SELECT * FROM usuario WHERE correo_electronico = :correo_electronico";
         $prepare = $pdo->prepare($sql);
         $resultQuery= $prepare->execute([
-            'correo' => $correo
+            'correo_electronico' =>$correo_electronico
             ]);
         $result = $prepare->fetch(\PDO::FETCH_ASSOC);
         
