@@ -23,13 +23,13 @@
               <div class="collapse navbar-collapse " id="navbarSupportedContent">
                 <ul class="navbar-nav m-auto">
                   <li class="nav-item">
-                    <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.php">Inicio<span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="contac.html">Ubicacion</a>
+                    <a class="nav-link" href="contac.php">Ubicacion</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="pedidos.html" role="button" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link" href="pedidos.php" role="button" aria-haspopup="true" aria-expanded="false">
                       Pedidos
                     </a>
                   </li>
@@ -44,7 +44,7 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-right dropdown-default"
                           aria-labelledby="navbarDropdownMenuLink-333 shadow">
-                          <a class="dropdown-item" href="login.html">Iniciar sesion</a>
+                          <a class="dropdown-item" href="login.php">Iniciar sesion</a>
                           <a class="dropdown-item" href="registro.php">Registrase</a>
                         </div>
                       </li>
