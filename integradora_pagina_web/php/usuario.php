@@ -1,7 +1,7 @@
 <?php
 namespace clases_pdo;
 
-require_once '../PanelAdmin/conexion.php';
+require_once '../../PanelAdmin/conexion.php';
 
 class User{
     
@@ -10,6 +10,7 @@ class User{
     private $correo_electronico;
     private $telefono;
     private $contrasena;
+    private $rol = '1';
     private $pdo;
     
     public function __construct(){
@@ -34,10 +35,11 @@ class User{
         $query = $pdo->prepare($sql);
         $result = $query->execute([
             'id_usuario' => $this->id,
+            'rol' => $this->rol,
             'nombre' => $this->nombre,
             'correo_electronico' => $this->correo_electronico,
             'telefono' => $this->telefono,
-            'contrasena' => $this->contrasena
+            'contrasena' => $this->contrasena,
             ]);
         return $result;
     }
@@ -95,10 +97,10 @@ class User{
     public function selectVali($correo)
     {
         $pdo = $this->pdo;
-        $sql = "SELECT * FROM usuario WHERE correo_electronico = :correo_electronico";
+        $sql = "SELECT * FROM usuario WHERE correo_electronico = :correo_electroni";
         $prepare = $pdo->prepare($sql);
         $resultQuery= $prepare->execute([
-            'correo_electronico' =>$correo_electronico
+            'correo_electroni' =>$correo
             ]);
         $result = $prepare->fetch(\PDO::FETCH_ASSOC);
         
