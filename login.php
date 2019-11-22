@@ -32,12 +32,12 @@
               </li>
               <li class="nav-item">
                   <a class="nav-link" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                    Catálogos
+                    Catálogo
                   </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="pedidos.php" role="button" aria-haspopup="true" aria-expanded="false">
-                    Pedidos
+                    Pedido
                   </a>
                 </li>
               <li class="nav-item">
