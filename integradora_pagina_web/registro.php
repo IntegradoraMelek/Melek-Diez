@@ -51,8 +51,8 @@
                     </ul> 
                     <div class="dropdown-menu dropdown-menu-right dropdown-default"
                       aria-labelledby="navbarDropdownMenuLink-333 shadow">
-                      <a class="dropdown-item" href="login.html">Iniciar sesion</a>
-                      <a class="dropdown-item" href="registro.html">Registrarte</a>
+                      <a class="dropdown-item" href="login.php">Iniciar sesion</a>
+                      <a class="dropdown-item" href="registro.php">Registrarte</a>
                     </div>
                   </li>
                 </ul> 
@@ -60,40 +60,38 @@
           </nav>
         <div class="container">
           <div class="row justify-content-center">
-            <div class="card shadow" style=" margin-top: 30px; width: 500px; height: 600px; background-color: rgb(0,0,0,0.4); color: white;">    
+            <div class="card shadow" style=" margin-top: 30px; width: 500px; height: 500px; background-color: rgb(0,0,0,0.4); color: white;">    
                 <div class="card-body">
                   <div class="text-center">
                     <label style="font-size: 30px;">Registro</label>
                   </div>
-                    <form class="">
+                    <form action="php/regusu.php" metod="post">
                     <div class="form-group">
                       <div class="row">
                         <div class="col">
                             <label for="exampleInputname1">Nombre</label>
-                            <input type="text" class="form-control" id="exampleInputname1" placeholder="Nombre" style="width: 210px;" >
+                            <input type="text" class="form-control" id="exampleInputname1" name="nombre" placeholder="Nombre" style="width: 210px;" >
                         </div>
                         <div class="col">
-                            <label for="exampleInputlastname">Apellido</label>
-                            <input type="text" class="form-control" id="exampleInputlastname" aria-describedby="emailHelp" placeholder="Apellido" style="width: 210px;" >
+                            <label for="exampleInputlastname">Telefono</label>
+                            <input type="text" class="form-control" id="exampleInputlastname" aria-describedby="emailHelp" name="telefono" placeholder="Telefono" style="width: 210px;" >
                         </div>
                       </div>
                     </div>    
                       <div class="form-group">
                         <label for="exampleInputEmail1">Correo electronico</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Correo electronico o telefono">
+                          <input type="email" class="form-control" id="exampleInputEmail1" name="correo_electronico" placeholder="Correo electronico o telefono">
                         </div>
                         <div class="form-group">
                           <label for="exampleInputPassword1">Contraseña</label>
-                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+                          <input type="password" class="form-control" id="exampleInputPassword1" name="contrasena" placeholder="Contraseña">
                         </div>
                           <div class="text-center">
-                            <button type="submit" class="btn btn-primary" class="form-group">
-                                <a href="index.html" style="color: white; text-decoration: none;">Registrarse</a>
-                            </button>
+                            <button type="submit" class="btn btn-primary" class="form-group">Registrarse</button>
                           </div>
                       </form>
                       <br>
-                      <div class="text-center"><h6>En caso de que ya estes registrado <a href="login.html" style="text-decoration: none; color: black;">Inicia sesion</a></h6></div>                          
+                      <div class="text-center"><h6>En caso de que ya estes registrado <a href="login.php" style="text-decoration: none; color: black;">Inicia sesion</a></h6></div>                          
                     </div>
               </div>
           </div>
