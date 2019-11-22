@@ -36,17 +36,22 @@
                   <a class="nav-link" href="index.php">Inicio<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="contac.php">Ubicacion</a>
+                  <a class="nav-link" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    catalogo
+                  </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="pedidos.php" role="button" aria-haspopup="true" aria-expanded="false">
                     Pedidos
                   </a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contac.php">Ubicacion</a>
+                </li>
               </ul>
               <?php
             
-            if (isset($_SESSION['usuario'])) {
+                if (isset($_SESSION['usuario'])) {
               ?>
               <ul class="navbar-nav ml-auto nav-flex-icons">
                 <li class="nav-item dropdown ">
