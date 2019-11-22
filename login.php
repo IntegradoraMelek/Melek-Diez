@@ -32,7 +32,7 @@
               </li>
               <li class="nav-item">
                   <a class="nav-link" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                    Catálogo
+                    Catálogos
                   </a>
                 </li>
                 <li class="nav-item">
