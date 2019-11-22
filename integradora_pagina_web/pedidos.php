@@ -19,58 +19,91 @@
 
 
 <body class="d-flex flex-column">
-      <?php
-        if(!isset($_SESSION['usuario'])){
-          header("location:login.php");
+<?php
+      session_start();
+      if(!isset($_SESSION['usuario'])){
+        header("location:login.php");
       }
       
       ?>
-      <header class="header2" style="background-image: url('312997-P8IMY8-496.jpg');">
+      <header class="header shadow" style="background-image: url('658972.jpg');">
+        <nav id="barra" class="navbar navbar-expand-lg navbar-dark" style="font-size: 20px;">
+            <h1 id="melek" class="text-white" ><span class="resaltado" >MELEK</span>DIEZ</h1>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+              <ul class="navbar-nav m-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.php">Inicio<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    catalogo
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="pedidos.php" role="button" aria-haspopup="true" aria-expanded="false">
+                    Pedidos
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contac.php">Ubicacion</a>
+                </li>
 
-          <nav id="barra" class="navbar navbar-expand-lg navbar-light" style="font-size: 20px;">
-              <h1 id="melek" class="text-black" ><span class="resaltado">MELEK</span>DIEZ</h1>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                <ul class="navbar-nav m-auto">
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.php">Inicio<span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contac.php">Ubicacion</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="pedidos.php" role="button" aria-haspopup="true" aria-expanded="false">
-                      Pedidos
-                    </a>
-                  </li>
-                </ul>
-                <ul class="navbar-nav ml-auto nav-flex-icons">
-                  <li class="nav-item dropdown ">
-                    <ul class="navbar-nav ml-auto nav-flex-icons">
-                      <li class="nav-item dropdown ">
-                        <a class="nav-link dropdown-toggle icon-torso" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-                          aria-haspopup="true" aria-expanded="false">
-                          <i class="fas fa-user"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right dropdown-default"
-                          aria-labelledby="navbarDropdownMenuLink-333 shadow">
-                          <a class="dropdown-item" href="login.php">Iniciar sesion</a>
-                          <a class="dropdown-item" href="registro.html">Registrase</a>
-                        </div>
-                      </li>
-                    </ul> 
-                    <div class="dropdown-menu dropdown-menu-right dropdown-default"
-                      aria-labelledby="navbarDropdownMenuLink-333 shadow">
-                      <a class="dropdown-item" href="login.html">Iniciar sesion</a>
-                      <a class="dropdown-item" href="registro.html">Registrarte</a>
-                    </div>
-                  </li>
-                </ul> 
-              </div>        
-          </nav>
+              </ul>
+              <?php
+            
+                if (isset($_SESSION['usuario'])) {
+              ?>
+              <ul class="navbar-nav ml-auto nav-flex-icons">
+                <li class="nav-item dropdown ">
+                  <ul class="navbar-nav ml-auto nav-flex-icons">
+                    <li class="nav-item dropdown ">
+                      <a class="nav-link dropdown-toggle icon-torso" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-default"
+                        aria-labelledby="navbarDropdownMenuLink-333">
+                        <a class="dropdown-item" href="php/cerrarSession.php">Cerrar</a>
+                      </div>
+                    </li>
+                  </ul> 
+                </li>
+              </ul> 
+             <?php
+            }else {
+             ?>
 
+              <ul class="navbar-nav ml-auto nav-flex-icons">
+                <li class="nav-item dropdown ">
+                  <ul class="navbar-nav ml-auto nav-flex-icons">
+                    <li class="nav-item dropdown ">
+                      <a class="nav-link dropdown-toggle icon-torso" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-default"
+                        aria-labelledby="navbarDropdownMenuLink-333">
+                        <a class="dropdown-item" href="login.php">Iniciar sesion</a>
+                        <a class="dropdown-item" href="registro.php">Registrase</a>
+                      </div>
+                    </li>
+                  </ul> 
+                  <div class="dropdown-menu dropdown-menu-right dropdown-default"
+                    aria-labelledby="navbarDropdownMenuLink-333">
+                    <a class="dropdown-item" href="login.php">Iniciar sesion</a>
+                    <a class="dropdown-item" href="registro.php">Registrase</a>
+                  </div>
+                </li>
+              </ul> 
+              <?php
+            }
+            ?>
+            
+            </div>        
+        </nav>
 
 
         <div class="container">
