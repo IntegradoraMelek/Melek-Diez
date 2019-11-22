@@ -31,12 +31,17 @@
                 <a class="nav-link" href="index.php">Inicio<span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contac.php">Ubicacion</a>
-              </li>
+                  <a class="nav-link" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    Catálogo
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="pedidos.php" role="button" aria-haspopup="true" aria-expanded="false">
+                    Pedidos
+                  </a>
+                </li>
               <li class="nav-item">
-                <a class="nav-link" href="pedidos.php" role="button" aria-haspopup="true" aria-expanded="false">
-                  Pedidos
-                </a>
+                <a class="nav-link" href="contac.php">Ubicacion</a>
               </li>
             </ul>
             <?php
