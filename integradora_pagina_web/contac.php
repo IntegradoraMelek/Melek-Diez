@@ -13,6 +13,13 @@
 </head>
 <body>
     
+<?php
+      session_start();
+      if(!isset($_SESSION['usuario'])){
+        header("location:login.php");
+      }
+      
+      ?>
   <header class="header2" style="background-image: url('312997-P8IMY8-496.jpg');">
     <nav id="barra" class="navbar navbar-expand-lg navbar-light"  style="font-size: 20px;">
         <h1 id="melek"><span class="resaltado">MELEK</span>DIEZ</h1>
@@ -33,19 +40,54 @@
               </a>
             </li>
           </ul>
-          <ul class="navbar-nav ml-auto nav-flex-icons">
-            <li class="nav-item dropdown ">
-              <a class="nav-link dropdown-toggle icon-torso" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-user"></i>
-              </a>
-              <div class="dropdown-menu dropdown-menu-right dropdown-default"
-                aria-labelledby="navbarDropdownMenuLink-333">
-                <a class="dropdown-item" href="login.php">Iniciar sesion</a>
-                <a class="dropdown-item" href="registro.php">Registrase</a>
-              </div>
-            </li>
-          </ul> 
+          <?php
+          if (isset($_SESSION['usuario'])) {
+              ?>
+              <ul class="navbar-nav ml-auto nav-flex-icons">
+                <li class="nav-item dropdown ">
+                  <ul class="navbar-nav ml-auto nav-flex-icons">
+                    <li class="nav-item dropdown ">
+                      <a class="nav-link dropdown-toggle icon-torso" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-default"
+                        aria-labelledby="navbarDropdownMenuLink-333">
+                        <a class="dropdown-item" href="php/cerrarSession.php">Cerrar</a>
+                      </div>
+                    </li>
+                  </ul> 
+                </li>
+              </ul> 
+             <?php
+            }else {
+             ?>
+
+              <ul class="navbar-nav ml-auto nav-flex-icons">
+                <li class="nav-item dropdown ">
+                  <ul class="navbar-nav ml-auto nav-flex-icons">
+                    <li class="nav-item dropdown ">
+                      <a class="nav-link dropdown-toggle icon-torso" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right dropdown-default"
+                        aria-labelledby="navbarDropdownMenuLink-333">
+                        <a class="dropdown-item" href="login.php">Iniciar sesion</a>
+                        <a class="dropdown-item" href="registro.php">Registrase</a>
+                      </div>
+                    </li>
+                  </ul> 
+                  <div class="dropdown-menu dropdown-menu-right dropdown-default"
+                    aria-labelledby="navbarDropdownMenuLink-333">
+                    <a class="dropdown-item" href="login.php">Iniciar sesion</a>
+                    <a class="dropdown-item" href="registro.php">Registrase</a>
+                  </div>
+                </li>
+              </ul> 
+              <?php
+            }
+            ?>
         </div>
     </nav>
     <div class="container mt-5 mb-5" id="mapa">
