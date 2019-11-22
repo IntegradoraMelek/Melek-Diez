@@ -31,7 +31,7 @@ class User{
     private function saveUser()
     {
         $pdo = $this->pdo;
-        $sql = "INSERT INTO usuario (id_usuario,nombre,correo_electronico,telefono,contrasena) VALUES (:id,:nombre,:correo_electronico,:telefono,:contrasena)";
+        $sql = "INSERT INTO Usuario (id_usuario,rol,nombre,correo_electronico,telefono,contrasena) VALUES (:id,:nombre,:rol,:correo_electronico,:telefono,:contrasena)";
         $query = $pdo->prepare($sql);
         $result = $query->execute([
             'id_usuario' => $this->id,
@@ -39,7 +39,7 @@ class User{
             'nombre' => $this->nombre,
             'correo_electronico' => $this->correo_electronico,
             'telefono' => $this->telefono,
-            'contrasena' => $this->contrasena,
+            'contrasena' => $this->contrasena
             ]);
         return $result;
     }
