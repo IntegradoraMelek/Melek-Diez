@@ -30,7 +30,7 @@ primary key (id_categoria)
 create table imagen
 (
 id_imagen integer auto_increment not null,
-imagen_url varchar(60),
+imagen_url varchar(120),
 primary key(id_imagen)
 )engine InnoDB;
 
