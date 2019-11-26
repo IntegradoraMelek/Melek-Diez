@@ -1,11 +1,11 @@
 <?php
 namespace clases_pdo;
 
-require_once '../../PanelAdmin/conexion.php';
+require_once 'conexion.php';
 
 class User{
     
-    private $id = '';
+    private $id_usuario = '';
     private $nombre;
     private $correo_electronico;
     private $telefono;
@@ -31,10 +31,11 @@ class User{
     private function saveUser()
     {
         $pdo = $this->pdo;
-        $sql = "INSERT INTO Usuario (id_usuario,rol,nombre,correo_electronico,telefono,contrasena) VALUES (:id,:nombre,:rol,:correo_electronico,:telefono,:contrasena)";
+        $sql = "INSERT INTO Usuario (id_usuario,rol,nombre,correo_electronico,telefono,contrasena)
+        VALUES (:id_usuario,:rol,:nombre,:correo_electronico,:telefono,:contrasena)";
         $query = $pdo->prepare($sql);
         $result = $query->execute([
-            'id_usuario' => $this->id,
+            'id_usuario' => $this->id_usuario,
             'rol' => $this->rol,
             'nombre' => $this->nombre,
             'correo_electronico' => $this->correo_electronico,
@@ -55,13 +56,13 @@ class User{
     }
     
     
-    public function deleteUser($id)
+    public function deleteUser($id_usuario)
     {
         $pdo = $this->pdo;
-        $sql = "DELETE FROM  Usuario WHERE id_usuario=:id";
+        $sql = "DELETE FROM  Usuario WHERE id_usuario=:id_usuario";
         $query = $pdo->prepare($sql);
         $result = $query->execute([
-            'id_usuario' => $id
+            'id_usuario' => $id_usuario
             ]);
             
         return $result;
@@ -69,22 +70,22 @@ class User{
     
     
     
-    public function selectUser($id)
+    public function selectUser($id_usuario)
     {
         $pdo = $this->pdo;
-        $sql = "SELECT * FROM usuario WHERE id_usuario =".$id;
+        $sql = "SELECT * FROM usuario WHERE id_usuario =".$id_usuario;
         $query = $pdo->query($sql);
         $queryResult = $query->fetchAll(\PDO::FETCH_ASSOC);
         return $queryResult;
     }
 
-    public function updateUser($id, $nombre, $telefono, $usuario, $contra)
+    public function updateUser($id_usuario, $nombre, $telefono, $usuario, $contra)
     {
         $pdo = $this->pdo;
-        $sql = "UPDATE usuario SET Name = :nombre, Phone = :telefono, User = :usuario, Password = :contra WHERE id_usuario = :id";
+        $sql = "UPDATE usuario SET Name = :nombre, Phone = :telefono, User = :usuario, Password = :contra WHERE id_usuario = :id_usuario";
         $query = $pdo->prepare($sql);
         $result = $query->execute([
-            'id_usuario' => $id,
+            'id_usuario' => $id_usuario,
             'nombre' => $nombre,
             'telefono' => $telefono,
             'usuario' => $usuario,

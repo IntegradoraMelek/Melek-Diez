@@ -1,6 +1,6 @@
 <?php   
 use clases_pdo\User;
-require_once('usuario.php');
+require_once('php/usuario.php');
 $nombre = $_POST['nombre'];
 $correo_electronico = $_POST['correo_electronico'];
 $telefono = $_POST['telefono'];
@@ -11,7 +11,7 @@ $Telefono = is_valid_phone($phone);
 $Correo = is_confirm_pass($pass,$pass_b);
 */
 $user = new User();
-$result = $user->agregarUsuario($nombre,$telefono,$correo_electronico,$contrasena);
+$result = $user->agregarUsuario($nombre,$correo_electronico,$telefono,$contrasena);
 if ($result=="1") {
    header("Location: ../index.php");
 }
