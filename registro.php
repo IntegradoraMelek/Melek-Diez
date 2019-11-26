@@ -65,7 +65,7 @@
                   <div class="text-center">
                     <label style="font-size: 30px;">Registro</label>
                   </div>
-                    <form action="php/regusu.php" metod="post">
+                    <form action="regusu.php" metod="post">
                     <div class="form-group">
                       <div class="row">
                         <div class="col">
@@ -74,7 +74,7 @@
                         </div>
                         <div class="col">
                             <label for="exampleInputlastname">Telefono</label>
-                            <input type="text" class="form-control" id="exampleInputlastname" aria-describedby="emailHelp" name="telefono" placeholder="Telefono" style="width: 210px;" >
+                            <input type="text" class="form-control" id="exampleInputlastname" name="telefono" aria-describedby="emailHelp"  placeholder="Telefono" style="width: 210px;" >
                         </div>
                       </div>
                     </div>    
