@@ -19,13 +19,7 @@
 
 
 <body class="d-flex flex-column">
-<?php
-      session_start();
-      if(!isset($_SESSION['usuario'])){
-        header("location:login.php");
-      }
-      
-      ?>
+
       <header class="header shadow" style="background-image: url('658972.jpg');">
         <nav id="barra" class="navbar navbar-expand-lg navbar-dark" style="font-size: 20px;">
             <h1 id="melek" class="text-white" ><span class="resaltado" >MELEK</span>DIEZ</h1>
@@ -52,10 +46,7 @@
                 </li>
 
               </ul>
-              <?php
-            
-                if (isset($_SESSION['usuario'])) {
-              ?>
+             
               <ul class="navbar-nav ml-auto nav-flex-icons">
                 <li class="nav-item dropdown ">
                   <ul class="navbar-nav ml-auto nav-flex-icons">
@@ -72,9 +63,7 @@
                   </ul> 
                 </li>
               </ul> 
-             <?php
-            }else {
-             ?>
+            
 
               <ul class="navbar-nav ml-auto nav-flex-icons">
                 <li class="nav-item dropdown ">
@@ -98,9 +87,7 @@
                   </div>
                 </li>
               </ul> 
-              <?php
-            }
-            ?>
+             
             
             </div>        
         </nav>
