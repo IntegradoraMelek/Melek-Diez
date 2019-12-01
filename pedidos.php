@@ -95,38 +95,62 @@
 
         <div class="container">
           <div class="row justify-content-center">
-            <div class="card shadow" style=" margin-top: 30px; width: 500px; height: 400px; background-color: rgb(0,0,0,0.4); color: white;">    
+            <div class="card shadow" style=" margin-top: 30px; width: 500px; height: 500px; background-color: rgb(0,0,0,0.4); color: white;">    
                 <div class="card-body">
                   <div class="text-center">
                     <label style="font-size: 30px;">Pedidos</label>
                   </div>
 
-                    <form action="" metod="">
+                    <form action="" method="post">
 
-                          <SELECT NAME="valor" SIZE="1">
-                              <OPTION VALUE="1">1</OPTION>
-                              <OPTION VALUE="2">2</OPTION>
-                              <OPTION VALUE="3">3</OPTION>
-                              <OPTION VALUE="4">4</OPTION>
-                              <OPTION VALUE="5">5</OPTION>
-                              <OPTION VALUE="6">6</OPTION>
-                              <OPTION VALUE="7">7</OPTION>
-                              <OPTION VALUE="8">8</OPTION>
-                              <OPTION VALUE="9">9</OPTION>
-                              <OPTION VALUE="10">10</OPTION>
-                              <OPTION VALUE="11">11</OPTION>
-                           </SELECT>
+                    <div class="form-group">
+    <label for="exampleFormControlSelect1">Seleccione el uniforme a pedir</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>Ejemplo Uniforme 1</option>
+      <option>Ejemplo Uniforme 2</option>
+      <option>Ejemplo Uniforme 3</option>
+      <option>Ejemplo Uniforme 4</option>
+      <option>Ejemplo Uniforme 5</option>
+      <option>Ejemplo Uniforme 1</option>
+      <option>Ejemplo Uniforme 1</option>
+      <option>Ejemplo Uniforme 1</option>
+      <option></option>
+      <option></option>
+      <option></option>
+      <option></option>
+      <option></option>
+      <option></option>
+      <option></option>
+    </select>
+  </div>
+                    <div class="form-group">
+    <label for="exampleFormControlSelect1">Seleccione cantidad de uniformes</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+      <option>11</option>
+      <option>12</option>
+      <option>13</option>
+      <option>14</option>
+      <option>15</option>
+    </select>
+  </div>
 
-                           <select name="">
-                             <option value="">Grande</option>
-                             <option value="">Mediana</option>
-                             <option value="">Chica</option>
-                           </select>
-                        </form>
-                        <div class="form-group">
-                          
-                          <textarea style="height:  150px; width: 455px;"  placeholder="Descripcion" class="form-control" aria-label="With textarea"></textarea>
-                        </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Descripcion de uniforme</label>
+    <textarea class="form-control" 
+    placeholder="Incluya alguna cambio específico del uniforme seleccionado. Por ejemplo cambio de color, de patrocinador, marca, etc."
+    id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+
                           <div class="text-center">
                             <button type="submit" class="btn btn-primary" class="form-group">
                                 <a href="index.html" style="color: white; text-decoration: none;">Enviar</a>
