@@ -1,3 +1,15 @@
+<?php
+
+require "PanelAdmin/conexion2.php";
+
+$sql = "SELECT * from producto";
+
+$stmt = $conn->prepare($sql);
+
+$stmt->execute();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -106,21 +118,24 @@
                     <div class="form-group">
     <label for="exampleFormControlSelect1">Seleccione el uniforme a pedir</label>
     <select class="form-control" id="exampleFormControlSelect1">
-      <option>Ejemplo Uniforme 1</option>
-      <option>Ejemplo Uniforme 2</option>
-      <option>Ejemplo Uniforme 3</option>
-      <option>Ejemplo Uniforme 4</option>
-      <option>Ejemplo Uniforme 5</option>
-      <option>Ejemplo Uniforme 1</option>
-      <option>Ejemplo Uniforme 1</option>
-      <option>Ejemplo Uniforme 1</option>
-      <option></option>
-      <option></option>
-      <option></option>
-      <option></option>
-      <option></option>
-      <option></option>
-      <option></option>
+
+
+        <?php
+
+           while($rows = $stmt->fetch(PDO::FETCH_ASSOC))
+
+           {
+
+            ?>
+           
+           <option value=""><?php echo $rows['nombre_producto'];?></option>
+       
+           <?php 
+             }
+           ?> 
+
+
+    
     </select>
   </div>
                     <div class="form-group">
@@ -153,7 +168,7 @@
 
                           <div class="text-center">
                             <button type="submit" class="btn btn-primary" class="form-group">
-                                <a href="index.html" style="color: white; text-decoration: none;">Enviar</a>
+                                <a href="index.html" style="color: white; text-decoration: none;">Continuar</a>
                             </button>
                           </div>
 
