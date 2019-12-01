@@ -2,11 +2,25 @@
 
 require "PanelAdmin/conexion2.php";
 
+// Consulta para vaciar productos en select de opciones
+
 $sql = "SELECT * from producto";
 
 $stmt = $conn->prepare($sql);
 
 $stmt->execute();
+
+// Variable para la fecha actual
+
+$fecha = new DateTime();
+$fecha2 = $fecha->format('Y-m-d H:i:s');   
+$fecha->getTimestamp();
+
+// Calcular fecha de entrega, sumando a fecha en que se hace pedido
+
+$fechaentrega = $fecha->modify('+20 days');
+$fecha3 = $fechaentrega->format('Y-m-d H:i:s');   
+
 
 ?>
 
@@ -107,7 +121,7 @@ $stmt->execute();
 
         <div class="container">
           <div class="row justify-content-center">
-            <div class="card shadow" style=" margin-top: 30px; width: 500px; height: 500px; background-color: rgb(0,0,0,0.4); color: white;">    
+            <div class="card shadow" style=" margin-top: 30px; width: 500px; height: 600px; background-color: rgb(0,0,0,0.4); color: white;">    
                 <div class="card-body">
                   <div class="text-center">
                     <label style="font-size: 30px;">Pedidos</label>
@@ -164,6 +178,16 @@ $stmt->execute();
     <textarea class="form-control" 
     placeholder="Incluya alguna cambio específico del uniforme seleccionado. Por ejemplo cambio de color, de patrocinador, marca, etc."
     id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Fecha de salida</label>
+    <input type="email" value="<?php echo($fecha2) ?>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Fecha de entrega</label>
+    <input type="email" value="<?php echo($fecha3) ?>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
   </div>
 
                           <div class="text-center">
