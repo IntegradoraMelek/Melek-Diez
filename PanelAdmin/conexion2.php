@@ -1,8 +1,8 @@
 <?php
 
-$password = "root";
-$user = "root";
-$dbname = 'MelekPrueba2';
+$password = "user";
+$user = "melek_user";
+$dbname = 'melek_melek3';
 
 
 
