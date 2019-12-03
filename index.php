@@ -106,81 +106,111 @@
     
     <div class="container mt-5">
       <div class="card-deck text-center">
-        <div class="card shadow p-3 mb-5 bg-white rounded">
-            <div class="image-box">
-                <img src="img/Nigeria.jpg" alt="Unsplashed Random" class="card-img-top" style="width: 300px;"/>
-              </div>
-          <hr class="bg-dark" style="padding: 1px;">
-            <div class="card-body">
-              <h5 class="card-title">Nigeria</h5>
+        <div class="card shadow bg-white rounded">
+          <div class="card-header bg-dark text-white">
+              <h5>Nigeria</h5>
             </div>
+          <div class="image-box">
+              <img src="img/Nigeria.jpg" alt="Unsplashed Random" class="card-img-top" style="width: 300px;"/>
+            </div>
+            <div class="card-body">
+                <hr class="bg-dark" style="padding: 1px;">
+              Precio:
+              <br> <br>
+              <button class="btn btn-outline-success">Pedidos</button>
+            </div>
+      </div>
+      <div class="card shadow bg-white rounded">
+        <div class="card-header bg-dark text-white">
+          <h5>Hombre Araña</h5>
         </div>
-      <div class="card  shadow p-3 mb-5 bg-white rounded">
           <div class="image-box">
               <img src="img/homaraña.jpg" alt="Unsplashed Random" class="card-img-top"/>
             </div>
-          <hr class="bg-dark" style="padding: 1px;">
-          <div class="card-body">
-            <h5 class="card-title">Hombre araña</h5>
-            <button class="btn btn-success">Comprame</button>
-          </div>
+              <div class="card-body">
+                  <hr class="bg-dark" style="padding: 1px;">
+                Precio: $150
+                <br> <br>
+                <button class="btn btn-outline-success">Pedidos</button>
+              </div>
         </div>
-      <div class="card  shadow p-3 mb-5 bg-white rounded hoverable">
+        <div class="card shadow bg-white rounded hoverable">
+          <div class="card-header bg-dark text-white">
+              <h5>Mexico</h5>
+            </div>
           <div class="image-box">
               <img src="img/MexVerde.jpg" alt="Unsplashed Random" class="card-img-top"/>
             </div>
-          <hr class="bg-dark" style="padding: 1px;">
-          <div class="card-body">
-            <h5 class="card-title">Mexico</h5>
-          </div>
+              <div class="card-body">
+                  <hr class="bg-dark" style="padding: 1px;">
+                Precio:
+                <br> <br>
+                <button class="btn btn-outline-success">Pedidos</button>
+              </div>
         </div>
       </div>
     </div>
 
     <div class="container mt-5">
         <div class="card-deck text-center">
-          <div class="card shadow p-3 mb-5 bg-white rounded">
-              <div class="image-box">
-                  <img src="img/spurs.jpg" alt="Unsplashed Random" class="card-img-top" style="width: 300px;"/>
+          <div class="card shadow bg-white rounded hoverable">
+            <div class="card-header bg-dark text-white">
+                <h5>Spurs</h5>
+              </div>
+            <div class="image-box">
+                <img src="img/spurs.jpg" alt="Unsplashed Random" class="card-img-top"/>
+              </div>
+                <div class="card-body">
+                    <hr class="bg-dark" style="padding: 1px;">
+                  Precio:
+                  <br> <br>
+                  <button class="btn btn-outline-success">Pedidos</button>
                 </div>
-            <hr class="bg-dark" style="padding: 1px;">
-            <div class="card-body">
-              <h5 class="card-title">Spurs</h5>
-            </div>
           </div>
-        <div class="card shadow p-3 mb-5 bg-white rounded">
-            <div class="image-box">
-                <img src="img/wolves.jpg" alt="Unsplashed Random" class="card-img-top"/>
+          <div class="card shadow bg-white rounded hoverable">
+            <div class="card-header bg-dark text-white">
+                <h5>Wolves</h5>
               </div>
-            <hr class="bg-dark" style="padding: 1px;">
-            <div class="card-body">
-              <h5 class="card-title">Wolves</h5>
-            </div>
+            <div class="image-box">
+                <img src="img/wolves.jpg" alt="Unsplashed Random" class="card-img-top" style="height: 519px; width: px;">
+              </div>
+                <div class="card-body">
+                    <hr class="bg-dark" style="padding: 1px;">
+                  Precio:
+                  <br> <br>
+                  <button class="btn btn-outline-success">Pedidos</button>
+                </div>
           </div>
-        <div class="card shadow p-3 mb-5 bg-white rounded">
-            <div class="image-box">
-                <img src="img/Nigeria.jpg" alt="Unsplashed Random" class="card-img-top" style="width: 300px;"/>
+          <div class="card shadow bg-white rounded hoverable">
+            <div class="card-header bg-dark text-white">
+                <h5>Nigeria</h5>
               </div>
-            <hr class="bg-dark" style="padding: 1px;">
-            <div class="card-body">
-              <h5 class="card-title">Nigeria</h5>
+            <div class="image-box">
+                <img src="img/Nigeria.jpg" alt="Unsplashed Random" class="card-img-top"/>
+              </div>
+                <div class="card-body">
+                    <hr class="bg-dark" style="padding: 1px;">
+                  Precio:
+                  <br> <br>
+                  <button class="btn btn-outline-success">Pedidos</button>
+                </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="mt-5 mb-5">
+          <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group mr-5 shadow rounded" role="group" aria-label="First group">
+              <button class="btn btn-dark btn-rounded active">1</button>
+              <button class="btn btn-dark btn-rounded">2</button>
+              <button class="btn btn-dark btn-rounded">3</button>
+              <button class="btn btn-dark btn-rounded">4</button>
+              <button class="btn btn-dark btn-rounded">5</button>
+              <button class="btn btn-dark btn-rounded">6</button>
             </div>
           </div>
         </div>
       </div>
-
-    <div class="mt-5 mb-5" style="display: flex; justify-content: center;">
-      <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-        <div class="btn-group mr-5 shadow rounded" role="group" aria-label="First group">
-          <button class="btn btn-dark btn-rounded">1</button>
-          <button class="btn btn-dark btn-rounded">2</button>
-          <button class="btn btn-dark btn-rounded">3</button>
-          <button class="btn btn-dark btn-rounded">4</button>
-          <button class="btn btn-dark btn-rounded">5</button>
-          <button class="btn btn-dark btn-rounded">6</button>
-        </div>
-      </div>
-    </div>
     
       <footer class="page-footer font-small unique-color-dark" >
             <div class="container">
