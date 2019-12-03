@@ -7,6 +7,7 @@ class User{
     
     private $id_usuario = '';
     private $nombre;
+    private $apellido;
     private $correo_electronico;
     private $telefono;
     private $contrasena;
@@ -18,9 +19,10 @@ class User{
     }
     
     
-    public function agregarUsuario($nombre,$correo_electronico,$telefono,$contrasena)
+    public function agregarUsuario($nombre,$apellido,$correo_electronico,$telefono,$contrasena)
     {   
         $this->nombre = $nombre;
+        $this->apellido = $apellido;
         $this->correo_electronico = $correo_electronico;
         $this->telefono = $telefono;
         $this->contrasena = $contrasena;
@@ -31,8 +33,8 @@ class User{
     private function saveUser()
     {
         $pdo = $this->pdo;
-        $sql = "INSERT INTO Usuario (id_usuario,rol,nombre,correo_electronico,telefono,contrasena)
-        VALUES (:id_usuario,:rol,:nombre,:correo_electronico,:telefono,:contrasena)";
+        $sql = "INSERT INTO Usuario (id_usuario,nombre,apellido,correo_electronico,telefono,contrasena)
+        VALUES (:id_usuario,:nombre,:apellido,S:correo_electronico,:telefono,:contrasena)";
         $query = $pdo->prepare($sql);
         $result = $query->execute([
             'id_usuario' => $this->id_usuario,

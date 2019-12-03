@@ -65,12 +65,16 @@
                   <div class="text-center">
                     <label style="font-size: 30px;">Registro</label>
                   </div>
-                    <form action="regusu.php" metod="post">
+                    <form action="regusu.php" metod="POST">
                     <div class="form-group">
                       <div class="row">
                         <div class="col">
                             <label for="exampleInputname1">Nombre</label>
                             <input type="text" class="form-control" id="exampleInputname1" name="nombre" placeholder="Nombre" style="width: 210px;" >
+                        </div>
+                        <div class="col">
+                            <label for="exampleInputlastname1">Nombre</label>
+                            <input type="text" class="form-control" id="examplelastname" name="apellido" placeholder="Apellidos" style="width: 210px;" >
                         </div>
                         <div class="col">
                             <label for="exampleInputlastname">Telefono</label>
