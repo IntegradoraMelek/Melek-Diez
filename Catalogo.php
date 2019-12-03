@@ -13,7 +13,7 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="stylesheet" href="CSS PAG/hover.css">
     <title>MELEK DIEZ</title>
-
+    
     <style>
     .card > img {
     top: 0;
@@ -32,14 +32,21 @@
             $imagen = new Galeria();
             $result = $imagen->getGaleria();
   		?>
-      <?php
+     
+  <div>     
+  <?php
       session_start();
       if(!isset($_SESSION['usuario'])){
         header("location:login.php");
       }
       
       ?>
-      <div>
+      <?php
+      if(!isset($_SESSION['usuario'])){
+        header("location:login.php");
+      }
+      
+      ?>
       <header class="header shadow" style="background-image: url('658972.jpg');">
         <nav id="barra" class="navbar navbar-expand-lg navbar-dark" style="font-size: 20px;">
             <h1 id="melek" class="text-white" ><span class="resaltado" >MELEK</span>DIEZ</h1>
@@ -53,7 +60,7 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="Catalogo.php" role="button" aria-haspopup="true" aria-expanded="false">
-                    Catálogo
+                    catalogo
                   </a>
                 </li>
                 <li class="nav-item">
@@ -117,7 +124,10 @@
             
             </div>        
         </nav>
-        
+        <h1 class="text-center" id="bienvenido" style="margin-top: 200px; font-size: 8vw; color: white;">Catálogo</h1>
+      </header>
+    
+        <h1>puto el que lo lea</h1>
     <div class="container">
         <div class="row">
             <?php
