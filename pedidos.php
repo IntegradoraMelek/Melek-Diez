@@ -41,9 +41,6 @@ $fecha3 = $fechaentrega->format('Y-m-d H:i:s');
 
 </head>
 
-
-
-
 <body class="d-flex flex-column">
 
       <header class="header shadow" style="background-image: url('658972.jpg');">
