@@ -65,29 +65,29 @@
                   <div class="text-center">
                     <label style="font-size: 30px;">Registro</label>
                   </div>
-                    <form action="regusu.php" metod="POST">
+                    <form action="regusu.php" method="POST">
                     <div class="form-group">
                       <div class="row">
                         <div class="col">
-                            <label for="exampleInputname1">Nombre</label>
+                            <label>Nombre</label>
                             <input type="text" class="form-control" id="exampleInputname1" name="nombre" placeholder="Nombre" style="width: 210px;" >
                         </div>
                         <div class="col">
-                            <label for="exampleInputlastname1">Nombre</label>
+                            <label>Nombre</label>
                             <input type="text" class="form-control" id="examplelastname" name="apellido" placeholder="Apellidos" style="width: 210px;" >
                         </div>
                         <div class="col">
-                            <label for="exampleInputlastname">Telefono</label>
+                            <label>Telefono</label>
                             <input type="text" class="form-control" id="exampleInputlastname" name="telefono" aria-describedby="emailHelp"  placeholder="Telefono" style="width: 210px;" >
                         </div>
                       </div>
                     </div>    
                       <div class="form-group">
-                        <label for="exampleInputEmail1">Correo electronico</label>
+                        <label>Correo electronico</label>
                           <input type="email" class="form-control" id="exampleInputEmail1" name="correo_electronico" placeholder="Correo electronico o telefono">
                         </div>
                         <div class="form-group">
-                          <label for="exampleInputPassword1">Contraseña</label>
+                          <label>Contraseña</label>
                           <input type="password" class="form-control" id="exampleInputPassword1" name="contrasena" placeholder="Contraseña">
                         </div>
                           <div class="text-center">
