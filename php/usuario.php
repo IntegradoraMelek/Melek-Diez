@@ -34,12 +34,12 @@ class User{
     {
         $pdo = $this->pdo;
         $sql = "INSERT INTO Usuario (id_usuario,nombre,apellido,correo_electronico,telefono,contrasena)
-        VALUES (:id_usuario,:nombre,:apellido,S:correo_electronico,:telefono,:contrasena)";
+        VALUES (:id_usuario,:nombre,:apellido,:correo_electronico,:telefono,:contrasena)";
         $query = $pdo->prepare($sql);
         $result = $query->execute([
             'id_usuario' => $this->id_usuario,
-            'rol' => $this->rol,
             'nombre' => $this->nombre,
+            'apellido' => $this->apellido,
             'correo_electronico' => $this->correo_electronico,
             'telefono' => $this->telefono,
             'contrasena' => $this->contrasena
