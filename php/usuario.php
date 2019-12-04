@@ -7,10 +7,11 @@ class User{
     
     private $id_usuario = '';
     private $nombre;
-    private $apellido;
+    private $apellido1;
+    private $apellido2;
+    private $contrasena;
     private $correo_electronico;
     private $telefono;
-    private $contrasena;
     private $rol = '1';
     private $pdo;
     
@@ -19,13 +20,14 @@ class User{
     }
     
     
-    public function agregarUsuario($nombre,$apellido,$correo_electronico,$telefono,$contrasena)
+    public function agregarUsuario($nombre,$apellido1,$apellido2,$contrasena,$correo_electronico,$telefono)
     {   
         $this->nombre = $nombre;
-        $this->apellido = $apellido;
+        $this->apellido1 = $apellido1;
+        $this->apellido2 = $apellido2;
+        $this->contrasena = $contrasena;
         $this->correo_electronico = $correo_electronico;
         $this->telefono = $telefono;
-        $this->contrasena = $contrasena;
         $result = $this->saveUser();
         return $result;
     }
@@ -33,16 +35,18 @@ class User{
     private function saveUser()
     {
         $pdo = $this->pdo;
-        $sql = "INSERT INTO Usuario (id_usuario,nombre,apellido,correo_electronico,telefono,contrasena)
-        VALUES (:id_usuario,:nombre,:apellido,:correo_electronico,:telefono,:contrasena)";
+        $sql = "INSERT INTO Usuario (id_usuario,nombre,apellido1,apellido2,contrasena,correo_electronico,telefono,rol)
+        VALUES (:id_usuario,:nombre,:apellido1,:apellido2,:contrasena,:correo_electronico,:telefono,:rol)";
         $query = $pdo->prepare($sql);
         $result = $query->execute([
             'id_usuario' => $this->id_usuario,
             'nombre' => $this->nombre,
-            'apellido' => $this->apellido,
+            'apellido1' => $this->apellido1,
+            'apellido2' => $this->apellido2,
+            'contrasena' => $this->contrasena,
             'correo_electronico' => $this->correo_electronico,
             'telefono' => $this->telefono,
-            'contrasena' => $this->contrasena
+            'rol' => $this->rol
             ]);
         return $result;
     }

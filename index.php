@@ -37,7 +37,7 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="Catalogo.php" role="button" aria-haspopup="true" aria-expanded="false">
-                    catalogo
+                    Catálogo
                   </a>
                 </li>
                 <li class="nav-item">

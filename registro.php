@@ -73,8 +73,12 @@
                             <input type="text" class="form-control" id="exampleInputname1" name="nombre" placeholder="Nombre" style="width: 210px;" >
                         </div>
                         <div class="col">
-                            <label>Nombre</label>
-                            <input type="text" class="form-control" id="examplelastname" name="apellido" placeholder="Apellidos" style="width: 210px;" >
+                            <label>Apellido Paterno</label>
+                            <input type="text" class="form-control" id="examplelastname" name="apellido1" placeholder="Apellido Paterno" style="width: 210px;" >
+                        </div>
+                        <div class="col">
+                            <label>Apellido Materno</label>
+                            <input type="text" class="form-control" id="examplelastname" name="apellido2" placeholder="Apellido Materno" style="width: 210px;" >
                         </div>
                         <div class="col">
                             <label>Telefono</label>

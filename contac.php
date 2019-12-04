@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../CSS PAG/estilos.css">
+    <link rel="stylesheet" href="CSS PAG/estilos.css">
     <link rel="stylesheet" href="styles.css">
     <script src="https://unpkg.com/scrollreveal"></script>
     <title>Ubicacion</title>
@@ -21,25 +21,30 @@
       
       ?>
   <header class="header2" style="background-image: url('312997-P8IMY8-496.jpg');">
-    <nav id="barra" class="navbar navbar-expand-lg navbar-light"  style="font-size: 20px;">
-        <h1 id="melek"><span class="resaltado">MELEK</span>DIEZ</h1>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse " id="navbarSupportedContent">
-          <ul class="navbar-nav m-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.php">Inicio</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="contac.php">Ubicacion</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link" href="pedidos.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Pedidos
-              </a>
-            </li>
-          </ul>
+  <nav id="barra" class="navbar navbar-expand-lg navbar-dark" style="font-size: 20px;">
+            <h1 id="melek" class="text-white" ><span class="resaltado" >MELEK</span>DIEZ</h1>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+              <ul class="navbar-nav m-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.php">Inicio<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Catalogo.php" role="button" aria-haspopup="true" aria-expanded="false">
+                    Catálogo
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="pedidos.php" role="button" aria-haspopup="true" aria-expanded="false">
+                    Pedidos
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contac.php">Ubicacion</a>
+                </li>
+              </ul>
           <?php
           if (isset($_SESSION['usuario'])) {
               ?>

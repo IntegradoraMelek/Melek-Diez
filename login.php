@@ -13,12 +13,33 @@
 </head>
 <body class="d-flex flex-column">
     <?php
-    session_start();
+    /*session_start();
     if(isset($_SESSION['usuario'])){
-      header("location:index.php");
+      if($_SESSION['rol'] == '0')
+      {
+        header("location: PanelAdmin/altaproducto.html");
+      }
+      else
+      {      
+        header("location:index.php");
+      }
     }
+*/
+    session_start();
+if(isset($_SESSION["usuario"])){
+    if($_SESSION["rol"] == 0){
+
+    }else{
+        header("Location: PanelAdmin/altaproducto.html");
+    }
+
+     }else{
+     header("Location: index.php");
+     }     
     
     ?>
+
+
   <header class="header2" style="background-image: url('312997-P8IMY8-496.jpg');">
       <nav id="barra" class="navbar navbar-expand-lg navbar-light" style="font-size: 20px;">
           <h1 id="melek" class="text-black" ><span class="resaltado">MELEK</span>DIEZ</h1>

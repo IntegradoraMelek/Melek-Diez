@@ -1,25 +1,12 @@
-
-
 <?php
-
 require 'conexion.php';
-
 $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING );
-
 $query = 'SELECT id_producto, nombre, color, descripcion from producto';
-
-
 $res = $conn->prepare($query);
  //exit($query);
 $res->fetchAll(PDO::FETCH_OBJ);
-
-
-
 $res->execute();
-
 print_r($res->errorInfo());
-
-
 var_dump($res);
 
 ?>
