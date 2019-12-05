@@ -39,19 +39,15 @@ var_dump($res);
                   <a class="nav-link" href="#">Productos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Usuarios</a>
+                    <a class="nav-link" href="#">Categorias</a>
                   </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
+                  <li class="nav-item">
+                  <a class="nav-link" href="#">Usuarios</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pedidos</a>
+                  </li>
+               
                
               </ul>
             
