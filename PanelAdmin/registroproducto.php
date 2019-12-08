@@ -70,7 +70,7 @@ $stmt->execute();
         
         <div class="form-group">
           <label for="categoria">Categoria</label>
-          <select class="form-control" id="categoria">
+          <select name="selectcategoria" class="form-control" id="categoria">
           
         <?php
 
@@ -80,7 +80,7 @@ $stmt->execute();
 
           ?>
 
-              <option value=""><?php echo $rows['nombre_categoria'];?></option>
+              <option value="<?php echo $rows['id_categoria'];?>"><?php echo $rows['nombre_categoria'];?></option>
 
           <?php 
               }
