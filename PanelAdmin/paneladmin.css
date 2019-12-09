@@ -14,7 +14,7 @@
     margin-right: auto;
     margin-top: 25px;
     border: 1px solid grey;
-    background-color: lightslategrey;
+    background-color:  rgba(0, 0, 0, 0.4);
     color: white;
 }
 
@@ -26,9 +26,7 @@ form {
   margin-top: auto;
   margin-bottom: auto;
 }
-body {
-  background-color: lightgray;
-}
+
 
 .table {
   margin-top: 25px;

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
     <a href="https://icons8.com/icon/13912/color"></a>
     <a href="https://icons8.com/icon/13963/twitter"></a>
     <link rel="stylesheet" href="CSS PAG/estilos.css">
@@ -13,6 +12,13 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="stylesheet" href="CSS PAG/hover.css">
     <title>MELEK DIEZ</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Black+Ops+One|Rubik+Mono+One&display=swap');
+      .resaltado{
+        font-family: 'Rubik Mono One', sans-serif;
+        font-family: 'Black Ops One', cursive;
+      }
+    </style>
     
 </head>
 <body>
@@ -24,29 +30,29 @@
       }
       
       ?>
-      <header class="header shadow" style="background-image: url('658972.jpg');">
+      <header class="header shadow topnav" style="background-image: url('658972.jpg');">
         <nav id="barra" class="navbar navbar-expand-lg navbar-dark" style="font-size: 20px;">
-            <h1 id="melek" class="text-white" ><span class="resaltado" >MELEK</span>DIEZ</h1>
+            <img src="img/logo-melek.png" width="120px">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
               <ul class="navbar-nav m-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.php">Inicio<span class="sr-only">(current)</span></a>
+                  <a id="text"class="nav-link" href="index.php">Inicio<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="Catalogo.php" role="button" aria-haspopup="true" aria-expanded="false">
+                  <a id="text"class="nav-link" href="Catalogo.php" role="button" aria-haspopup="true" aria-expanded="false">
                     Catálogo
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="pedidos.php" role="button" aria-haspopup="true" aria-expanded="false">
+                  <a id="text"class="nav-link" href="pedidos.php" role="button" aria-haspopup="true" aria-expanded="false">
                     Pedidos
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="contac.php">Ubicacion</a>
+                  <a id="text"class="nav-link" href="contac.php">Ubicacion</a>
                 </li>
               </ul>
               <?php
@@ -101,7 +107,10 @@
             
             </div>        
         </nav>
-        <h1 class="text-center" id="bienvenido" style="margin-top: 200px; font-size: 8vw; color: white;">Bienvenido</h1>
+        <h1 class="text-center" id="bienvenido" style="margin-top: 150px; font-size: 5vw; color: white; font-family: 'Rubik Mono One', sans-serif;font-family: 'Black Ops One', cursive;">
+          MELEK<span class="resaltado">DIEZ</span><br>
+          La piel de tu equipo!
+        </h1>
       </header>
     
     <div class="container mt-5">
