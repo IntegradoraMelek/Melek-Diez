@@ -26,17 +26,10 @@
     }
 */
     session_start();
-if(isset($_SESSION["usuario"])){
-    if($_SESSION["rol"] == 0){
-
-    }else{
-        header("Location: PanelAdmin/altaproducto.html");
+    if(isset($_SESSION['usuario']))
+    {
+        header("location:index.php");
     }
-
-     }else{
-     header("Location: index.php");
-     }     
-    
     ?>
 
 

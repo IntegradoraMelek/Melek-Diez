@@ -20,7 +20,7 @@ echo $correo_electronico;
 echo $telefono;
 echo $contrasena;
 $user = new User();
-$result = $user->agregarUsuario($nombre,$apellido1,$apellido2,$correo_electronico,$telefono,$contrasena);
+$result = $user->agregarUsuario($nombre,$apellido1,$apellido2,$contrasena,$correo_electronico,$telefono);
 if ($result=="1") {
    header("Location: index.php");
 }
