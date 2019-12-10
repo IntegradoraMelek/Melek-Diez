@@ -72,6 +72,12 @@
                   <div class="dropdown-menu dropdown-menu-right dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
                     <a class="dropdown-item" href="php/cerrarSession.php">Cerrar</a>
                   </div>
+                  <div class="dropdown-menu dropdown-menu-right dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+                  <?php
+                    echo "<a class='dropdown-item' href='#'><h4>".$_SESSION['usuario']."<h4><a/>";                  
+                  ?>
+                  </div>
+                  
                 </li>
               </ul>
             </li>
