@@ -34,40 +34,44 @@ $fecha3 = $fechaentrega->format('Y-m-d H:i:s');
     <title>Pedidos</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS PAG\estilos.css">
-    <link rel="stylesheet" href="CSS PAG/estiloslogin.css">
     <link rel="stylesheet" href="styles.css">
     <script src="https://unpkg.com/scrollreveal"></script>
-
+    <style>
+        body{
+            background-image: url('312997-P8IMY8-496.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 2000px;
+        }
+    </style>
 
 </head>
 
-<body class="d-flex flex-column">
+<body>
 
-      <header class="header shadow" style="background-image: url('658972.jpg');">
-        <nav id="barra" class="navbar navbar-expand-lg navbar-dark" style="font-size: 20px;">
-            <h1 id="melek" class="text-white" ><span class="resaltado" >MELEK</span>DIEZ</h1>
+    <header class="header topnav">
+        <nav id="barra" class="navbar navbar-expand-lg navbar-light" style="font-size: 20px;">
+            <img src="img/logo-melek.png" width="120px">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
               <ul class="navbar-nav m-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="index.php">Inicio<span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                  <a id="text"class="nav-link" href="index.php">Inicio<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                    catalogo
+                  <a id="text"class="nav-link" href="Catalogo.php" role="button" aria-haspopup="true" aria-expanded="false">
+                    Catálogo
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="pedidos.php" role="button" aria-haspopup="true" aria-expanded="false">
+                <li class="nav-item active">
+                  <a id="text"class="nav-link" href="pedidos.php" role="button" aria-haspopup="true" aria-expanded="false">
                     Pedidos
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="contac.php">Ubicacion</a>
+                  <a id="text"class="nav-link" href="contac.php">Ubicacion</a>
                 </li>
-
               </ul>
              
               <ul class="navbar-nav ml-auto nav-flex-icons">
@@ -118,7 +122,7 @@ $fecha3 = $fechaentrega->format('Y-m-d H:i:s');
 
         <div class="container">
           <div class="row justify-content-center">
-            <div class="card shadow" style=" margin-top: 30px; width: 500px; height: 600px; background-color: rgb(0,0,0,0.4); color: white;">    
+            <div class="card shadow" style=" margin-top: 30px; width: 500px; height: 600px; background-color: rgb(0,0,0,0.7); color: white;">    
                 <div class="card-body">
                   <div class="text-center">
                     <label style="font-size: 30px;">Pedidos</label>
@@ -206,7 +210,7 @@ $fecha3 = $fechaentrega->format('Y-m-d H:i:s');
           </div>
         </div>
                 
-        <footer class="page-footer font-small" style="margin-top: 165px; background-color: rgb(0,0,0,0.4);">
+        <footer class="page-footer font-small" style="margin-top: 165px; background-color: rgb(0,0,0,0.7);">
           <div class="container">
             <div class="footer-copyright py-5">© 2019 Copyright:
                 <a href="#" style="text-decoration: none; color: black;"> MELEK DIEZ</a>
