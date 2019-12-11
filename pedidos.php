@@ -13,13 +13,24 @@ $stmt->execute();
 // Variable para la fecha actual
 
 $fecha = new DateTime();
-$fecha2 = $fecha->format('Y-m-d H:i:s');
+$fecha2 = $fecha->format('Y-m-d');
 $fecha->getTimestamp();
 
 // Calcular fecha de entrega, sumando a fecha en que se hace pedido
 
 $fechaentrega = $fecha->modify('+20 days');
-$fecha3 = $fechaentrega->format('Y-m-d H:i:s');
+$fecha3 = $fechaentrega->format('Y-m-d');
+
+
+//Sacar el total , precio de producto x cantidad
+
+// $rows = $stmt->fetch(PDO::FETCH_ASSOC);
+
+//   $total = $rows['precio_unitario'] 
+
+
+
+
 
 
 ?>
@@ -37,6 +48,8 @@ $fecha3 = $fechaentrega->format('Y-m-d H:i:s');
   <link rel="stylesheet" href="CSS PAG\estilos.css">
   <link rel="stylesheet" href="styles.css">
   <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="js/jquery.js"></script>
+  <script src="datospedido.js"></script>
   <style>
     body {
       background-image: url('312997-P8IMY8-496.jpg');
@@ -48,6 +61,15 @@ $fecha3 = $fechaentrega->format('Y-m-d H:i:s');
 </head>
 
 <body>
+
+<?php
+  session_start();
+
+  if (!isset($_SESSION['usuario'])) {
+    header("location:login.php");
+  }
+
+  ?>
 
   <header class="header topnav">
     <nav id="barra" class="navbar navbar-expand-lg navbar-light" style="font-size: 20px;">
@@ -63,6 +85,8 @@ $fecha3 = $fechaentrega->format('Y-m-d H:i:s');
           <li class="nav-item">
             <a id="text" class="nav-link" href="Catalogo.php" role="button" aria-haspopup="true" aria-expanded="false">
               Catálogo
+              <p><?php echo ($_SESSION['id_usuario']);?></p>
+              
             </a>
           </li>
           <li class="nav-item active">
@@ -74,6 +98,10 @@ $fecha3 = $fechaentrega->format('Y-m-d H:i:s');
             <a id="text" class="nav-link" href="contac.php">Ubicacion</a>
           </li>
         </ul>
+        <?php
+
+if (isset($_SESSION['usuario'])) {
+  ?>
         <ul class="navbar-nav ml-auto nav-flex-icons">
           <li class="nav-item dropdown ">
             <ul class="navbar-nav ml-auto nav-flex-icons">
@@ -88,6 +116,10 @@ $fecha3 = $fechaentrega->format('Y-m-d H:i:s');
             </ul>
           </li>
         </ul>
+        <?php
+        } else {
+          ?>
+
         <ul class="navbar-nav ml-auto nav-flex-icons">
           <li class="nav-item dropdown ">
             <ul class="navbar-nav ml-auto nav-flex-icons">
@@ -107,6 +139,10 @@ $fecha3 = $fechaentrega->format('Y-m-d H:i:s');
             </div>
           </li>
         </ul>
+
+        <?php
+        }
+        ?>
       </div>
     </nav>
 
@@ -119,11 +155,11 @@ $fecha3 = $fechaentrega->format('Y-m-d H:i:s');
               <label style="font-size: 30px;">Pedidos</label>
             </div>
 
-            <form action="" method="post">
+            <form action="datospedido.php" method="post">
 
               <div class="form-group">
-                <label for="exampleFormControlSelect1">Seleccione el uniforme a pedir</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <label for="producto">Seleccione el uniforme a pedir</label>
+                <select class="form-control" onChange="getPrecio();" id="selectProducto">
 
 
                   <?php
@@ -132,7 +168,8 @@ $fecha3 = $fechaentrega->format('Y-m-d H:i:s');
 
                     ?>
 
-                    <option value=""><?php echo $rows['nombre_producto']; ?></option>
+                    <option data-precio="<?php echo $rows['precio_unitario'];?>"
+                            value="<?php echo $rows['id_producto'];?>"><?php echo $rows['nombre_producto']; ?></option>
 
                   <?php
                   }
@@ -140,45 +177,52 @@ $fecha3 = $fechaentrega->format('Y-m-d H:i:s');
 
                 </select>
               </div>
+
               <div class="form-group">
-                <label for="exampleFormControlSelect1">Seleccione cantidad de uniformes</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                  <option>6</option>
-                  <option>7</option>
-                  <option>8</option>
-                  <option>9</option>
-                  <option>10</option>
-                  <option>11</option>
-                  <option>12</option>
-                  <option>13</option>
-                  <option>14</option>
-                  <option>15</option>
+                <label for="precioUnitario">Precio Unitario</label>
+                <label for="precioUnitario" id="preciopro">0.00</label>
+            
+              </div>
+
+              <div class="form-group">
+                <label for="cantidad">Seleccione cantidad de uniformes</label>
+                <select class="form-control" id="cantidad">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10"> 10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
                 </select>
               </div>
 
               <div class="form-group">
-                <label for="exampleFormControlTextarea1">Descripcion de uniforme</label>
+                <label for="descripcion">Descripcion de uniforme</label>
                 <textarea class="form-control" placeholder="Incluya alguna cambio específico del uniforme seleccionado. Por ejemplo cambio de color, de patrocinador, marca, etc." id="exampleFormControlTextarea1" rows="3"></textarea>
               </div>
 
               <div class="form-group">
-                <label for="exampleInputEmail1">Fecha de salida</label>
-                <input type="email" value="<?php echo ($fecha2) ?>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <label for="fechasalida">Fecha de salida</label>
+                <input type="text" value="<?php echo ($fecha2) ?>" class="form-control" id="fechasalida"  placeholder="">
               </div>
 
               <div class="form-group">
-                <label for="exampleInputEmail1">Fecha de entrega</label>
-                <input type="email" value="<?php echo ($fecha3) ?>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <label for="fechaentrega">Fecha de entrega</label>
+                <input type="text" value="<?php echo ($fecha3) ?>" class="form-control" id="fechaentrega" placeholder="">
               </div>
 
               <div class="text-center">
                 <button type="submit" class="btn btn-primary" class="form-group">
-                  <a href="index.html" style="color: white; text-decoration: none;">Continuar</a>
+                  <a href="" style="color: white; text-decoration: none;">Continuar</a>
                 </button>
               </div>
             </form>
