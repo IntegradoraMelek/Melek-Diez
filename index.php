@@ -28,6 +28,7 @@
 
   <?php
   session_start();
+
   if (!isset($_SESSION['usuario'])) {
     header("location:login.php");
   }
@@ -47,6 +48,10 @@
           <li class="nav-item">
             <a id="text" class="nav-link" href="Catalogo.php" role="button" aria-haspopup="true" aria-expanded="false">
               Catálogo
+          
+              <p><?php echo ($_SESSION['id_usuario']);?></p>
+              
+
             </a>
           </li>
           <li class="nav-item">
