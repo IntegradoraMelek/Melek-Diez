@@ -23,15 +23,28 @@
   </style>
 
 </head>
-
 <body>
 
   <?php
-  session_start();
 
+  session_start();
   if (!isset($_SESSION['usuario'])) {
     header("location:login.php");
   }
+
+    if(isset($_SESSION['usuario'])){
+      if($_SESSION['rol'] == '0')
+      {
+        header("location: PanelAdmin/altaproductos.php");
+      }
+    }
+  
+  
+ /* if (isset($_SESSION['usuario'])) {
+    header("location:index.php");
+  }
+*/
+  
 
   ?>
   <header class="header shadow topnav" style="background-image: url('658972.jpg');">
@@ -48,10 +61,6 @@
           <li class="nav-item">
             <a id="text" class="nav-link" href="Catalogo.php" role="button" aria-haspopup="true" aria-expanded="false">
               Catálogo
-          
-              <p><?php echo ($_SESSION['id_usuario']);?></p>
-              
-
             </a>
           </li>
           <li class="nav-item">
@@ -75,14 +84,10 @@
                     <i class="fas fa-user"></i>
                   </a>
                   <div class="dropdown-menu dropdown-menu-right dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+                    <?php echo "<a class='dropdown-item'>".$_SESSION['usuario']."<a/>";              ?>
                     <a class="dropdown-item" href="php/cerrarSession.php">Cerrar</a>
-                  </div>
-                  <div class="dropdown-menu dropdown-menu-right dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-                  <?php
-                    echo "<a class='dropdown-item' href='#'><h4>".$_SESSION['usuario']."<h4><a/>";                  
-                  ?>
-                  </div>
-                  
+                    <a class="dropdown-item" href="configuration.php">Configuración</a>
+                  </div>            
                 </li>
               </ul>
             </li>

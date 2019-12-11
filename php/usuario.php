@@ -1,11 +1,11 @@
 <?php
 namespace clases_pdo;
 
-require_once 'conexion3.php';
+require_once 'conexion.php';
 
 class User{
     
-    private $id_usuario = 0;
+    private $id_usuario;
     private $nombre;
     private $apellido1;
     private $apellido2;
@@ -85,17 +85,16 @@ class User{
         return $queryResult;
     }
 
-    public function updateUser($id_usuario, $nombre, $telefono, $usuario, $contra)
+    public function updateUser($id_usuario,$contra,$correo_electronico)
     {
         $pdo = $this->pdo;
-        $sql = "UPDATE usuario SET Name = :nombre, Phone = :telefono, User = :usuario, Password = :contra WHERE id_usuario = :id_usuario";
+        $sql = "UPDATE usuario SET Name = Password = :contra, correo_electronico=:correo_electronico
+        WHERE id_usuario = :id_usuario";
         $query = $pdo->prepare($sql);
         $result = $query->execute([
             'id_usuario' => $id_usuario,
-            'nombre' => $nombre,
-            'telefono' => $telefono,
-            'usuario' => $usuario,
-            'contra' => $contra
+            'contra' => $contra,
+            'correo_electronico' => $correo_electronico
             ]);
             
         return $result;

@@ -1,6 +1,6 @@
 <?php
 
-require "conexion2.php";
+require "conexion.php";
 
 $nombre = $_POST["nombre"];
 $precio = $_POST["precio"];

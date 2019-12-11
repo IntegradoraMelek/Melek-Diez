@@ -15,24 +15,10 @@
 
 <body class="d-flex flex-column">
   <?php
-  /*session_start();
-    if(isset($_SESSION['usuario'])){
-      if($_SESSION['rol'] == '0')
-      {
-        header("location: PanelAdmin/altaproducto.html");
-      }
-      else
-      {      
+    if (isset($_SESSION['usuario'])) {
         header("location:index.php");
       }
-    }
-*/
-  session_start();
-  if (isset($_SESSION['usuario'])) {
-    header("location:index.php");
-  }
   ?>
-
 
   <header class="header2 topnav" style="background-image: url('312997-P8IMY8-496.jpg');">
     <nav id="barra" class="navbar navbar-expand-lg navbar-light" style="font-size: 20px;">
