@@ -1,18 +1,18 @@
 <?php
 namespace clases_pdo;
 
-require_once 'conexion.php';
+require_once 'conexion3.php';
 
 class User{
     
-    private $id_usuario = '';
+    private $id_usuario = 0;
     private $nombre;
     private $apellido1;
     private $apellido2;
     private $contrasena;
     private $correo_electronico;
     private $telefono;
-    private $rol = '1';
+    private $rol = 1;
     private $pdo;
     
     public function __construct(){
@@ -35,7 +35,7 @@ class User{
     private function saveUser()
     {
         $pdo = $this->pdo;
-        $sql = "INSERT INTO Usuario (id_usuario,nombre,apellido1,apellido2,contrasena,correo_electronico,telefono,rol)
+        $sql = "INSERT INTO usuario (id_usuario,nombre,apellido1,apellido2,contrasena,correo_electronico,telefono,rol)
         VALUES (:id_usuario,:nombre,:apellido1,:apellido2,:contrasena,:correo_electronico,:telefono,:rol)";
         $query = $pdo->prepare($sql);
         $result = $query->execute([
