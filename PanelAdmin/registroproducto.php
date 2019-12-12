@@ -55,7 +55,7 @@ $stmt->execute();
 <div class="containerform">
   <h4>Alta de producto</h4>
   <hr>
-    <form method="POST" action="altaproducto.php">
+    <form method="POST" action="altaproducto.php" enctype="multipart/form-data">
             <div class="form-group">
                     <label for="nombre">Nombre</label>
                     <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre">
@@ -93,6 +93,11 @@ $stmt->execute();
           <label for="descripcion">Descripcion</label>
           <textarea class="form-control" placeholder="Descripcion del producto" name="descripcion" id="descripcion" rows="3"></textarea>
         </div>
+
+        <label for="imagen" class="control-label">imagen</label>
+    <input type="file" accept="image/*" class="form-control" id="imagen" name="imagen" required="" placeholder="" >    
+        
+
 
         <button type="submit" class="btn btn-primary mb-2">Agregar</button>
       </form>
