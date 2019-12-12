@@ -6,7 +6,7 @@ $id=$_GET['id'];
 
 
 
-require 'conexion.php';
+require 'conexion2.php';
 
 $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING );
 
@@ -20,6 +20,12 @@ $producto = $res->fetch(PDO::FETCH_OBJ);
 
 
 // print_r($res->errorInfo());
+
+$sql = "SELECT * from categoria";
+
+$stmt = $conn->prepare($sql);
+
+$stmt->execute();
 
 // var_dump($res);
 
@@ -73,22 +79,32 @@ $producto = $res->fetch(PDO::FETCH_OBJ);
 
     <input type="hidden" name="id_producto" value="<?php echo $producto->id_producto; ?>">
             <div class="form-group">
-                    <label for="nombre">Example label</label>
-                    <input value="<?php echo $producto->nombre ?>" type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre">
+                    <label for="nombre">Nombre</label>
+                    <input value="<?php echo $producto->nombre_producto ?>" type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre">
                   </div>
                   <div class="form-group">
-                    <label for="color">Another label</label>
-                    <input value="<?php echo $producto->color ?>" type="text" class="form-control" name="color" id="color" placeholder="Color">
+                    <label for="color">Precio Unitario</label>
+                    <input value="<?php echo $producto->precio_unitario ?>" type="text" class="form-control" name="precio" id="precio" placeholder="$">
                   </div>
         
-        <div class="form-group">
+                  <div class="form-group">
           <label for="categoria">Categoria</label>
-          <select class="form-control" id="categoria">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
+          <select name="selectcategoria" class="form-control" id="categoria">
+          
+        <?php
+
+            while($rows = $stmt->fetch(PDO::FETCH_ASSOC))
+
+              {
+
+          ?>
+
+              <option value="<?php echo $rows['id_categoria'];?>"><?php echo $rows['nombre_categoria'];?></option>
+
+          <?php 
+              }
+        ?> 
+          
           </select>
         </div>
 
@@ -96,13 +112,7 @@ $producto = $res->fetch(PDO::FETCH_OBJ);
     <label for="descripcion">Descripcion</label>
     <textarea class="form-control" id="descripcion" name="descripcion" rows="3"><?php echo $producto->descripcion ?></textarea>
   </div>
-       
-        <!-- <div class="form-group"> -->
-          <!-- <label for="descripcion">Descripcion</label> -->
-          <!-- <input value="" class="form-control" name="descripcion" id="descripcion" rows="3"> -->
-        <!-- </div> -->
-
-       
+          
 
         <button type="submit" class="btn btn-primary mb-2">Guardar cambios</button>
       </form>
