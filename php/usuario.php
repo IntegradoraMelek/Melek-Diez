@@ -1,7 +1,7 @@
 <?php
 namespace clases_pdo;
 
-require_once 'conexion.php';
+require_once 'conexion3.php';
 
 class User{
     
