@@ -124,7 +124,6 @@
       </nav>
       <h1 class="text-center" id="bienvenido" style="margin-top: 200px; font-size: 8vw; color: white;">Catálogo</h1>
     </header>
-
     <div class="container">
       <div class="row">
         <?php
