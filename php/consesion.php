@@ -20,7 +20,7 @@ if (!isset($_POST['correo_electronico']) || !isset($_POST['contrasena'])){
             {
                 if ($result['contrasena'] == $contrasena)
                 {
-                    $_SESSION['id_usuario']=$result['id_usuario'];
+                    $_SESSION['id_usuario']= $result['id_usuario'];
                     $_SESSION['usuario'] = $result['nombre'];
                     $_SESSION['rol'] = $result['rol'];
 
