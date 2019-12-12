@@ -84,16 +84,16 @@ class User{
         $queryResult = $query->fetchAll(\PDO::FETCH_ASSOC);
         return $queryResult;
     }
-
-    public function updateUser($id_usuario,$contra,$correo_electronico)
+    
+    public function updateUser($id_sesion,$contrasena,$correo_electronico)
     {
         $pdo = $this->pdo;
-        $sql = "UPDATE usuario SET Name = Password = :contra, correo_electronico=:correo_electronico
+        $sql = "UPDATE usuario SET contrasena = :contrasena, correo_electronico=:correo_electronico
         WHERE id_usuario = :id_usuario";
         $query = $pdo->prepare($sql);
         $result = $query->execute([
-            'id_usuario' => $id_usuario,
-            'contra' => $contra,
+            'id_usuario' => $id_sesion,
+            'contrasena' => $contrasena,
             'correo_electronico' => $correo_electronico
             ]);
             
@@ -111,5 +111,17 @@ class User{
         $result = $prepare->fetch(\PDO::FETCH_ASSOC);
         
         return $result;
+    }
+
+
+    public function select_Pedido()
+    {
+        $pdo = $this->pdo;
+        $sql = "SELECT pedido.id_pedido, usuario.nombre,producto.nombre, pedido.cantidad,
+        pedido.fecha_salida, pedido.fecha_entrega FROM usuario inner join pedido 
+        on usuario.id_usuario=pedido.id_usuario inner join producto on producto.id_producto=pedido.id_producto";
+        $query = $pdo->query($sql);
+        $queryResult = $query->fetchAll(\PDO::FETCH_ASSOC);
+        return $queryResult;
     }
 }
