@@ -72,6 +72,9 @@
           <li class="nav-item">
             <a id="text" class="nav-link" href="contac.php">Ubicacion</a>
           </li>
+          <li class="nav-item">
+            <a id="text" class="nav-link" href="catalogo2.php">Catálogo2</a>
+          </li>
         </ul>
         <?php
 
