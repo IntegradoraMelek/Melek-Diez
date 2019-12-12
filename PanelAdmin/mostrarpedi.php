@@ -49,7 +49,7 @@
             <a id="text" class="nav-link" href="altacategoria.html">Categorias</a>
           </li>
           <li class="nav-item">
-            <a id="text" class="nav-link" href="mostrarpedi.php">Pedidos</a>
+            <a id="text" class="nav-link" href="#">Pedidos</a>
           </li>
         </ul>
       </div>
@@ -65,39 +65,39 @@ if (isset($_SESSION['usuario'])) {
           <?php
           }       
           ?>
-    <div class="containerform">
-      <h4>Alta de producto</h4>
-      <hr>
-      <form method="POST" action="altaproducto.php">
-        <div class="form-group">
-          <label for="nombre">Nombre</label>
-          <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre">
-        </div>
-        <div class="form-group">
-          <label for="color">Color</label>
-          <input type="text" class="form-control" name="color" id="color" placeholder="Color">
-        </div>
+<div class="container">
+        <h1 align="center"> Pedidos </h1>
 
-        <div class="form-group">
-          <label for="categoria">Categoria</label>
-          <select class="form-control" id="categoria">
-            <option>Playera</option>
-            <option>Short</option>
-            <option>Medias</option>
+        <?php
+          use clases_pdo\Usuario;
+          require_once('../php/usuario.php');
+          $user = new User();
+            $tabla = $user->select_Pedido();
+          echo "<table class='table <style>color:white;</style>' 
+          <thead>
+          <tr>
+          <th>Num Pedido</th><th>Usuario</th><th>Producto</th><th>Cantidad</th><th>Fecha de Salida</th><th>Fecha de Entega</th>
+          </tr>
+          </thead>
+          <tbody>";
 
-          </select>
-        </div>
+          foreach($tabla as $fila)
+          {
+              echo "<tr>";
+              echo "<td>".$fila["id_pedido"]."</td>";
+              echo "<td>".$fila["nombre"]."</td>";
+              echo "<td>".$fila["nombre"]."</td>";
+              echo "<td>".$fila["cantidad"]."</td>";
+              echo "<td>".$fila["fecha_salida"]."</td>";
+              echo "<td>".$fila["fecha_entrega"]."</td>";
+              echo "</tr>";
+          }
 
-        <div class="form-group">
-          <label for="descripcion">Descripcion</label>
-          <textarea class="form-control" placeholder="Descripcion del producto" name="descripcion" id="descripcion"
-            rows="3"></textarea>
-        </div>
+          echo "</tbody>
+          </table>";
 
-        <button type="submit" class="btn btn-primary mb-2">Agregar</button>
-      </form>
+          ?>
+           <a href="../index.php">Regresar</a></div>
     </div>
-  </header>
 </body>
-
 </html>

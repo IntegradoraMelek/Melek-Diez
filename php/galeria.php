@@ -5,9 +5,8 @@ require_once 'conexion.php';
 
 class Galeria{
     
-    private $id = '';
+    private $id_imagen = '';
     private $imagen_url;
-    private $precio_uni;
     private $pdo;
     
     public function __construct(){
@@ -25,10 +24,10 @@ class Galeria{
     private function saveImagen()
     {
         $pdo = $this->pdo;
-        $sql = "INSERT INTO imagen VALUES (:id,:imagen)";
+        $sql = "INSERT INTO imagen VALUES (:id_imagen,:imagen)";
         $query = $pdo->prepare($sql);
         $result = $query->execute([
-            'id' => $this->id,
+            'id_imagen' => $this->id_imagen,
             'imagen_url' => $this->imagen
             ]);
         return $pdo->lastInsertId();;
@@ -44,59 +43,6 @@ class Galeria{
       return $queryResult;
     }
     
-    
-    public function deleteUser($id)
-    {
-        $pdo = $this->pdo;
-        $sql = "DELETE FROM usuario WHERE id_usuario=:id";
-        $query = $pdo->prepare($sql);
-        $result = $query->execute([
-            'id' => $id
-            ]);
-            
-        return $result;
-    }
-    
-    
-    
-    
-    public function selectUser($id)
-    {
-        $pdo = $this->pdo;
-        $sql = "SELECT * FROM usuario WHERE id_usuario =".$id;
-        $query = $pdo->query($sql);
-        $queryResult = $query->fetchAll(\PDO::FETCH_ASSOC);
-        return $queryResult;
-    }
-
-    public function updateUser($id, $nombre, $telefono, $usuario, $contra)
-    {
-        $pdo = $this->pdo;
-        $sql = "UPDATE usuario SET Name = :nombre, Phone = :telefono, User = :usuario, Password = :contra WHERE id_usuario = :id";
-        $query = $pdo->prepare($sql);
-        $result = $query->execute([
-            'id_usuario' => $id,
-            'nombre' => $nombre,
-            'telefono' => $telefono,
-            'usuario' => $usuario,
-            'contra' => $contra
-            ]);
-            
-        return $result;
-    }
-    
-    public function selectVali($correo)
-    {
-        $pdo = $this->pdo;
-        $sql = "SELECT * FROM usuario WHERE correo_electronico = :correo_electroni";
-        $prepare = $pdo->prepare($sql);
-        $resultQuery= $prepare->execute([
-            'correo_electroni' =>$correo
-            ]);
-        $result = $prepare->fetch(\PDO::FETCH_ASSOC);
-        
-        return $result;
-    }
 
 }
 

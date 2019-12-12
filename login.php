@@ -18,6 +18,8 @@
     if (isset($_SESSION['usuario'])) {
         header("location:index.php");
       }
+
+      
   ?>
 
   <header class="header2 topnav" style="background-image: url('312997-P8IMY8-496.jpg');">
