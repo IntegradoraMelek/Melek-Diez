@@ -48,7 +48,7 @@ $fecha3 = $fechaentrega->format('Y-m-d');
   <link rel="stylesheet" href="CSS PAG\estilos.css">
   <link rel="stylesheet" href="styles.css">
   <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="js/jquery.js"></script>
+  <script src="PanelAdmin/js/jquery.js"></script>
   <script src="datospedido.js"></script>
   <style>
     body {
@@ -158,8 +158,8 @@ if (isset($_SESSION['usuario'])) {
             <form action="datospedido.php" method="post">
 
               <div class="form-group">
-                <label for="producto">Seleccione el uniforme a pedir</label>
-                <select class="form-control" onChange="getPrecio();" id="selectProducto">
+                <label for="selectproducto">Seleccione el uniforme a pedir</label>
+                <select name="selectproducto" class="form-control" id="selectproducto">
 
 
                   <?php
@@ -168,10 +168,13 @@ if (isset($_SESSION['usuario'])) {
 
                     ?>
 
-                    <option data-precio="<?php echo $rows['precio_unitario'];?>"
-                            value="<?php echo $rows['id_producto'];?>"><?php echo $rows['nombre_producto']; ?></option>
+                    <option data-precio="<?php echo $rows['precio_unitario'];?>" 
+                    value="<?php echo $rows['id_producto'];?>|<?php echo $rows['precio_unitario'];?>">
+                    <?php echo $rows['nombre_producto']; ?></option>
+                   
 
                   <?php
+
                   }
                   ?>
 
@@ -180,13 +183,12 @@ if (isset($_SESSION['usuario'])) {
 
               <div class="form-group">
                 <label for="precioUnitario">Precio Unitario</label>
-                <label for="precioUnitario" id="preciopro">0.00</label>
-            
+                <label for="precioUnitario" name="preciounitario" id="preciopro">0.00</label>
               </div>
 
               <div class="form-group">
                 <label for="cantidad">Seleccione cantidad de uniformes</label>
-                <select class="form-control" id="cantidad">
+                <select class="form-control" name="cantidad" id="cantidad">
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -196,7 +198,7 @@ if (isset($_SESSION['usuario'])) {
                   <option value="7">7</option>
                   <option value="8">8</option>
                   <option value="9">9</option>
-                  <option value="10"> 10</option>
+                  <option value="10">10</option>
                   <option value="11">11</option>
                   <option value="12">12</option>
                   <option value="13">13</option>
@@ -207,18 +209,21 @@ if (isset($_SESSION['usuario'])) {
 
               <div class="form-group">
                 <label for="descripcion">Descripcion de uniforme</label>
-                <textarea class="form-control" placeholder="Incluya alguna cambio específico del uniforme seleccionado. Por ejemplo cambio de color, de patrocinador, marca, etc." id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea class="form-control" name="descripcion" placeholder="Incluya alguna cambio específico del uniforme seleccionado. Por ejemplo cambio de color, de patrocinador, marca, etc." id="exampleFormControlTextarea1" rows="3"></textarea>
               </div>
 
               <div class="form-group">
                 <label for="fechasalida">Fecha de salida</label>
-                <input type="text" value="<?php echo ($fecha2) ?>" class="form-control" id="fechasalida"  placeholder="">
+                <input type="text" value="<?php echo ($fecha2) ?>" class="form-control" name="fechasalida" id="fechasalida"  placeholder="">
               </div>
 
               <div class="form-group">
                 <label for="fechaentrega">Fecha de entrega</label>
-                <input type="text" value="<?php echo ($fecha3) ?>" class="form-control" id="fechaentrega" placeholder="">
+                <input type="text" value="<?php echo ($fecha3) ?>" class="form-control" name="fechaentrega" id="fechaentrega" placeholder="">
               </div>
+
+              <button type="submit" class="btn btn-primary mb-2">Continuar</button>
+
 
               <div class="text-center">
                 <button type="submit" class="btn btn-primary" class="form-group">
