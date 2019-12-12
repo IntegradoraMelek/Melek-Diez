@@ -119,7 +119,8 @@ class User{
         $pdo = $this->pdo;
         $sql = "SELECT pedido.id_pedido, usuario.nombre,producto.nombre, pedido.cantidad,
         pedido.fecha_salida, pedido.fecha_entrega FROM usuario inner join pedido 
-        on usuario.id_usuario=pedido.id_usuario inner join producto on producto.id_producto=pedido.id_producto";
+        on usuario.id_usuario=pedido.id_usuario inner join producto on 
+        producto.id_producto=pedido.id_producto";
         $query = $pdo->query($sql);
         $queryResult = $query->fetchAll(\PDO::FETCH_ASSOC);
         return $queryResult;
