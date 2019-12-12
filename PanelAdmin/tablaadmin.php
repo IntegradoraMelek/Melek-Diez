@@ -1,7 +1,7 @@
 <?php
-require 'conexion.php';
+require 'conexion2.php';
 $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING );
-$query = 'SELECT id_producto, nombre, color, descripcion from producto';
+$query = 'SELECT id_producto, nombre_producto, precio_unitario, descripcion , id_categoria from producto';
 $res = $conn->prepare($query);
  //exit($query);
 $res->fetchAll(PDO::FETCH_OBJ);
@@ -61,8 +61,9 @@ var_dump($res);
           <tr>
             <th scope="col">ID</th>
             <th scope="col">Nombre</th>
-            <th scope="col">Color</th>
+            <th scope="col">Precio Unitario</th>
             <th scope="col">Descripcion</th>
+            <th scope="col">Categoria/Liga</th>
             <th scope="col">Editar</th>
             <th scope="col">Eliminar</th>
           </tr>
@@ -72,9 +73,10 @@ var_dump($res);
 <?php foreach ($res as $producto) {?>
            <tr>
            <td><?php echo $producto['id_producto'] ?></td>
-           <td><?php echo $producto['nombre'] ?></td>
-           <td><?php echo $producto['color'] ?></td>
+           <td><?php echo $producto['nombre_producto'] ?></td>
+           <td><?php echo $producto['precio_unitario'] ?></td>
            <td><?php echo $producto['descripcion'] ?></td>
+           <td><?php echo $producto['id_categoria'] ?></td>
            <td><a href="<?php echo 'editarproducto.php?id=' . $producto['id_producto']?>">Editar</a></td>
            <td><a href="<?php echo 'eliminarproducto.php?id=' . $producto['id_producto']?>">Eliminar</a></td>
            </tr>
