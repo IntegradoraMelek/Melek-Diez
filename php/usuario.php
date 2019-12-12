@@ -125,4 +125,22 @@ class User{
         $queryResult = $query->fetchAll(\PDO::FETCH_ASSOC);
         return $queryResult;
     }
+    public function selectcats()
+    {
+        $pdo = $this->pdo;
+        $sql = "SELECT * FROM categoria";
+        $query = $pdo->query($sql);
+        $queryResult = $query->fetchAll(\PDO::FETCH_ASSOC);
+        return $queryResult;
+    }
+    public function selectCategoria($id)
+    {
+        $pdo = $this->pdo;
+        $sql = "SELECT producto.nombre, producto.precio_uni, categoria.nombres from producto 
+        inner join categoria on producto.id_categoria=categoria.id_categoria where = categoria.nombres  ".$id;
+        $query = $pdo->query($sql);
+        $queryResult = $query->fetchAll(\PDO::FETCH_ASSOC);
+        return $queryResult;
+    }
+
 }
