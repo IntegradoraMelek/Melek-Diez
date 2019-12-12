@@ -1,27 +1,32 @@
 <?php
 
-require "conexion2.php";
+require "PanelAdmin/conexion2.php";
+
+session_start();
+
+list($producto,$precio) = explode('|', $_POST['selectproducto']);
 
 $id_usuario = $_SESSION['id_usuario'];
-$id_producto = $_POST["precio"];
-$cantidad = $_POST["descripcion"];
-$fecha_entrega = $_POST["selectcategoria"];
-$fecha_salida = $_POST["selectcategoria"];
+$producto = $producto;
+$cantidad = $_POST["cantidad"];
+$fecha_entrega = $_POST["fechaentrega"];
+$fecha_salida = $_POST["fechasalida"];
 $descripcion = $_POST["descripcion"];
+$total = $cantidad * $precio;
 
 $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING );
 
 $query = 'INSERT INTO pedido (id_usuario , 
                               id_producto , 
                               cantidad ,
-                              fecha_entrega ,
                               fecha_salida ,
-                              descripcion , 
-                              total) 
- values ("'.$id_usuario.'","'.$id_producto.'","'.$cantidad.'","'.$fecha_entrega.'","'.$fecha_salida.'" , ,)';
+                              fecha_entrega ,
+                              total, 
+                              descripcion) 
+ values ("'.$id_usuario.'", "'.$producto.'","'.$cantidad.'","'.$fecha_salida.'","'.$fecha_entrega.'","'.$total.'", "'.$descripcion.'")';
 
 // exit($query);
-
+var_dump($query);
 $res = $conn->prepare($query);
 
 $res->execute();
