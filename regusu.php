@@ -22,7 +22,7 @@ echo $contrasena;
 $user = new User();
 $result = $user->agregarUsuario($nombre,$apellido1,$apellido2,$contrasena,$correo_electronico,$telefono);
 if ($result=="1") {
-   header("Location: index.php");
+   header("Location: login.php");
 }
 //header("Location:../view/viewsUser.php");
 ?>

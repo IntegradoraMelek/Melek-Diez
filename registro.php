@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf8">
-  <title>formulario con Bootstrap y Jquery Validate</title>
+  <title>Registro</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -42,21 +42,6 @@
           </li>
           <li class="nav-item">
             <a id="text" class="nav-link" href="contac.php">Ubicacion</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav ml-auto nav-flex-icons">
-          <li class="nav-item dropdown ">
-            <ul class="navbar-nav ml-auto nav-flex-icons">
-              <li class="nav-item dropdown ">
-                <a class="nav-link dropdown-toggle icon-torso" id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="fas fa-user"></i>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right dropdown-default" aria-labelledby="navbarDropdownMenuLink-333 shadow">
-                  <a class="dropdown-item" href="login.php">Iniciar sesion</a>
-                  <a class="dropdown-item" href="registro.php">Registrase</a>
-                </div>
-              </li>
-            </ul>
           </li>
         </ul>
       </div>
