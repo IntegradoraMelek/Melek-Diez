@@ -4,8 +4,8 @@ require "PanelAdmin/conexion2.php";
 
 session_start();
 
-
 $id_usuario = $_SESSION['id_usuario'];
+$id_pedido = $_SESSION['lastId_pedido'];
 
 $nombre = $_POST["nombre"];
 $numero = $_POST["numero"];
@@ -19,7 +19,7 @@ $query = 'INSERT INTO detalle_pedido (id_pedido ,
                               numero_playera ,
                               talla_short ,
                               talla_playera ) 
- values ("'.$id_usuario.'", "'.$nombre.'","'.$numero.'","'.$talla_short.'","'.$talla_playera.'")';
+ values ("'.$id_pedido.'", "'.$nombre.'","'.$numero.'","'.$talla_short.'","'.$talla_playera.'")';
 
 // exit($query);
 var_dump($query);
@@ -28,3 +28,5 @@ $res = $conn->prepare($query);
 $res->execute();
 
 print_r($res->errorInfo());
+
+
