@@ -10,9 +10,9 @@
   <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.0/jquery.validate.js"></script>
   <script type="text/javascript"
     src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.10.0/localization/messages_es.js"></script>
-  <script src="formulario.js"></script>
+    <script src="formulario.js"></script>
+    <link rel="stylesheet" href="CSS PAG\estilos.css">
   <link href="style.css" rel="stylesheet">
-  <link rel="stylesheet" href="CSS PAG\estilos.css">
   <link rel="stylesheet" href="styles.css">
   <script src="https://unpkg.com/scrollreveal"></script>
 </head>
@@ -22,44 +22,41 @@
   <header class="header2 topnav" style="background-image: url('312997-P8IMY8-496.jpg');">
     <nav id="barra" class="navbar navbar-expand-lg navbar-light" style="font-size: 20px;">
       <h1 id="melek" class="text-black"><span class="resaltado">MELEK</span>DIEZ</h1>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse " id="navbarSupportedContent">
         <ul class="navbar-nav m-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.php">Inicio<span class="sr-only">(current)</span></a>
+            <a id="text" class="nav-link" href="index.php">Inicio<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contac.php">Ubicacion</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pedidos.php" role="button" aria-haspopup="true" aria-expanded="false">
-              Pedidos
+            <a id="text" class="nav-link" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+              Catálogo
             </a>
+          </li>
+          <li class="nav-item">
+            <a id="text" class="nav-link" href="pedidos.php" role="button" aria-haspopup="true" aria-expanded="false">
+              Pedido
+            </a>
+          </li>
+          <li class="nav-item">
+            <a id="text" class="nav-link" href="contac.php">Ubicacion</a>
           </li>
         </ul>
         <ul class="navbar-nav ml-auto nav-flex-icons">
           <li class="nav-item dropdown ">
             <ul class="navbar-nav ml-auto nav-flex-icons">
               <li class="nav-item dropdown ">
-                <a class="nav-link dropdown-toggle icon-torso" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle icon-torso" id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="fas fa-user"></i>
                 </a>
-                <div class="dropdown-menu dropdown-menu-right dropdown-default"
-                  aria-labelledby="navbarDropdownMenuLink-333 shadow">
+                <div class="dropdown-menu dropdown-menu-right dropdown-default" aria-labelledby="navbarDropdownMenuLink-333 shadow">
                   <a class="dropdown-item" href="login.php">Iniciar sesion</a>
                   <a class="dropdown-item" href="registro.php">Registrase</a>
                 </div>
               </li>
             </ul>
-            <div class="dropdown-menu dropdown-menu-right dropdown-default"
-              aria-labelledby="navbarDropdownMenuLink-333 shadow">
-              <a class="dropdown-item" href="login.php">Iniciar sesion</a>
-              <a class="dropdown-item" href="registro.php">Registrarte</a>
-            </div>
           </li>
         </ul>
       </div>

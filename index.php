@@ -29,10 +29,6 @@
 
   session_start();
   
-  if (!isset($_SESSION['usuario'])) {
-    header("location:login.php");
-  }
-
     if(isset($_SESSION['usuario'])){
       if($_SESSION['rol'] == '0')
       {

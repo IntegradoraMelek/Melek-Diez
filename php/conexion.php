@@ -1,7 +1,7 @@
 <?php
 
 namespace clases_pdo;
-
+use Exception;
 class Conexion extends \PDO
 {
     private $typeDB = 'mysql';
