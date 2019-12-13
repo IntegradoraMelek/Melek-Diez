@@ -32,7 +32,7 @@ if (!isset($_SESSION['usuario'])) {
   }
 ?>
 <header class="header shadow topnav" style="background-image: url('312997-P8IMY8-496.jpg');">
-  <nav id="barra" class="navbar navbar-expand-lg navbar-dark" style="font-size: 20px;">
+  <nav id="barra" class="navbar navbar-expand-lg navbar-light" style="font-size: 20px;">
     <img src="img/logo-melek.png" width="120px">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

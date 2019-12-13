@@ -19,7 +19,7 @@
 
 <body class="d-flex flex-column">
 
-  <header class="header2" style="background-image: url('312997-P8IMY8-496.jpg');">
+  <header class="header2 topnav" style="background-image: url('312997-P8IMY8-496.jpg');">
     <nav id="barra" class="navbar navbar-expand-lg navbar-light" style="font-size: 20px;">
       <h1 id="melek" class="text-black"><span class="resaltado">MELEK</span>DIEZ</h1>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"

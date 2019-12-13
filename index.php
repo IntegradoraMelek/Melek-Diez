@@ -231,9 +231,6 @@
           <button class="btn btn-dark btn-rounded active">1</button>
           <button class="btn btn-dark btn-rounded">2</button>
           <button class="btn btn-dark btn-rounded">3</button>
-          <button class="btn btn-dark btn-rounded">4</button>
-          <button class="btn btn-dark btn-rounded">5</button>
-          <button class="btn btn-dark btn-rounded">6</button>
         </div>
       </div>
     </div>
