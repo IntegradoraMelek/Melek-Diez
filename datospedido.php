@@ -2,7 +2,19 @@
 
 require "PanelAdmin/conexion2.php";
 
+ob_start();
+
 session_start();
+
+
+try{
+    $pdo = new PDO("mysql:host=localhost;dbname=melek3A", "root", "root");
+    // Set the PDO error mode to exception
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch(PDOException $e){
+    die("ERROR: Could not connect. " . $e->getMessage());
+}
+ 
 
 list($producto,$precio) = explode('|', $_POST['selectproducto']);
 
@@ -14,7 +26,9 @@ $fecha_salida = $_POST["fechasalida"];
 $descripcion = $_POST["descripcion"];
 $total = $cantidad * $precio;
 
-$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING );
+
+
+$pdo->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING );
 
 $query = 'INSERT INTO pedido (id_usuario , 
                               id_producto , 
@@ -27,8 +41,15 @@ $query = 'INSERT INTO pedido (id_usuario ,
 
 // exit($query);
 var_dump($query);
-$res = $conn->prepare($query);
+$res = $pdo->prepare($query);
 
 $res->execute();
 
-print_r($res->errorInfo());
+$id_pedido = $pdo->lastInsertId();
+echo $id_pedido;
+
+$_SESSION['lastId_pedido'] = $id_pedido;
+
+// print_r($res->errorInfo());
+
+ header("Location: detalle_pedidos.php");
