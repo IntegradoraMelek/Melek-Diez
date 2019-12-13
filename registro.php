@@ -69,7 +69,7 @@
             <div class="text-center">
               <label style="font-size: 30px;">Registro</label>
             </div>
-            <form action="regusu.php" id="formulario" class="form-horizontal">
+            <form action="regusu.php" id="formulario" class="form-horizontal" method="POST">
               <div class="control-group">
                 <div class="row">
                   <div class="col">

@@ -6,7 +6,7 @@ class Conexion extends \PDO
 {
     private $typeDB = 'mysql';
     private $host = 'localhost';
-    private $dbname = 'melek3A';
+    private $dbname = 'melek3a';
     private $root = 'root';
     private $pass= '';   
     
