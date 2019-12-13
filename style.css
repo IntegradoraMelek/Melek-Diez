@@ -1,0 +1,10 @@
+/* # cambiar estilo a error
+============================================*/
+.controls > .error {
+    color: #e4d12b;
+    display: inline-block;
+    *display: inline;
+    padding-left: 5px;
+    vertical-align: middle;
+    *zoom: 1;
+}

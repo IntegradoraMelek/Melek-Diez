@@ -1,14 +1,14 @@
 <?php
 
 namespace clases_pdo;
-
+use Exception;
 class Conexion extends \PDO
 {
     private $typeDB = 'mysql';
     private $host = 'localhost';
     private $dbname = 'melek3A';
     private $root = 'root';
-    private $pass= 'root';   
+    private $pass= '';   
     
     
     public function __construct(){
