@@ -1,3 +1,9 @@
+<?php
+
+  session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,6 +38,7 @@
           <li class="nav-item">
             <a class="nav-link" href="#" role="button" aria-haspopup="true" aria-expanded="false">
               Catalogo
+              <?php echo($_SESSION['lastId_pedido']);?>
             </a>
           </li>
           <li class="nav-item">
