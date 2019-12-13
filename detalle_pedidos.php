@@ -31,7 +31,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-              catalogo
+              Catalogo
             </a>
           </li>
           <li class="nav-item">
@@ -80,18 +80,47 @@
         </ul>
       </div>
     </nav>
-    <div class="container">
+    <div class="container" style="width: 800px; border: 1px solid white;">
       <div class="row justify-content-center">
-        <div class="card shadow" style=" margin-top: 30px; width: 500px; height: 500px; background-color: rgb(0,0,0,0.4); color: white;">
+        <div class="card shadow" style=" margin-top: 30px; width: 500px; height: 650px; background-color: rgb(0,0,0,0.4); color: white;">
           <div class="card-body">
             <div class="text-center">
-              <label style="font-size: 30px;">Pedidos</label>
+              <label style="font-size: 30px;">Eliga las caracteristicas de sus uniformes</label>
             </div>
-            <form action="" method="post">
+            <form id="formdetalle"  method="POST">
               <div class="text-center">
-                <button type="submit" class="btn btn-primary" class="form-group">
-                  <a href="index.html" style="color: white; text-decoration: none;">Continuar</a>
-                </button>
+  
+              <div class="form-group">
+    <label for="nombre">Nombre</label>
+    <input type="text" class="form-control" name="nombre" id="nombre" placeholder="">
+  </div>
+
+  <div class="form-group">
+    <label for="numero">Numero</label>
+    <input type="text" class="form-control" name="numero" id="numero" placeholder="">
+  </div>
+
+<div class="form-group">
+    <label for="selectshort">Talla short</label>
+    <select class="form-control" name="selectshort" id="selectshort">
+      <option value="chico">Chico</option>
+      <option value="mediano">Mediano</option>
+      <option value="grande">Grande</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="selectplayera">Talla playera</label>
+    <select class="form-control" name="selectplayera" id="selectplayera">
+      <option value="chica">Chica</option>
+      <option value="mediana">Mediana</option>
+      <option value="grande">Grande</option>
+    </select>
+  </div>
+
+
+  <button type="submit" id="boton" onclick="savedata()" class="btn btn-primary mb-2">Submit</button>
+               
               </div>
             </form>
           </div>
@@ -145,5 +174,8 @@
 
 
 </body>
+
+<script src="js/jquery.js"></script>
+<script src="detallespedido.js"></script>
 
 </html>
