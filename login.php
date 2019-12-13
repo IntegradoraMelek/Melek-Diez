@@ -24,7 +24,7 @@
 
   <header class="header2 topnav" style="background-image: url('312997-P8IMY8-496.jpg');">
     <nav id="barra" class="navbar navbar-expand-lg navbar-light" style="font-size: 20px;">
-      <h1 id="melek" class="text-black"><span class="resaltado">MELEK</span>DIEZ</h1>
+    <img src="img/logo-melek.png" width="120px">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -47,36 +47,11 @@
             <a id="text" class="nav-link" href="contac.php">Ubicacion</a>
           </li>
         </ul>
-        <?php
-
-        if (isset($_SESSION['usuario'])) {
-          echo "" . $_SESSION['usuario'];
-        } else {
-          ?>
-
-          <ul class="navbar-nav ml-auto nav-flex-icons">
-            <li class="nav-item dropdown ">
-              <ul class="navbar-nav ml-auto nav-flex-icons">
-                <li class="nav-item dropdown ">
-                  <a class="nav-link dropdown-toggle icon-torso" id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-user"></i>
-                  </a>
-                  <div class="dropdown-menu dropdown-menu-right dropdown-default" aria-labelledby="navbarDropdownMenuLink-333 shadow">
-                    <a class="dropdown-item" href="login.php">Iniciar sesion</a>
-                    <a class="dropdown-item" href="registro.php">Registrase</a>
-                  </div>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        <?php
-        }
-        ?>
       </div>
     </nav>
     <div class="container">
       <div class="row justify-content-center">
-        <div class="card" style="margin-top: 50px; width: 350px; height: 420px; background-color: rgb(0,0,0,0.4); color: white;">
+        <div class="card" style="margin-top: 50px; width: 350px; height: 450px; background-color: rgb(0,0,0,0.4); color: white;">
           <div class="card-body">
             <form action="php/consesion.php" method="POST">
               <div class="text-center">
@@ -94,6 +69,11 @@
                 <button type="submit" class="btn btn-primary" style="color: white; text-decoration: none;">Iniciar Sesion</button>
               </div>
             </form>
+            <br>
+              <div class="text-center">
+                <h6>En caso de que no tengas una cuenta <a href="registro.php"
+                    style="text-decoration: none; color: black; font-size:25px">Registrate</a></h6>
+              </div>
           </div>
         </div>
       </div>
