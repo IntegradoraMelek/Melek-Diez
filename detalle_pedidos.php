@@ -126,7 +126,7 @@
   </div>
 
 
-  <button type="submit" id="boton" onclick="savedata()" class="btn btn-primary mb-2">Submit</button>
+  <button id="boton" class="btn btn-primary mb-2">Submit</button>
                
               </div>
             </form>
