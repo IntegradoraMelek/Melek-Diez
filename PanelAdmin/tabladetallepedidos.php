@@ -1,16 +1,6 @@
 <?php
 require 'conexion2.php';
-$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING );
 
-$query = 'SELECT pedido.id_pedido, detalle_pedido. , detalle_pedido.nombre_playera ,
- detalle_pedido.numero_playera , detalle_pedido.talla_short , detalle_pedido.talla_playera 
- from pedido inner join detalle_pedido on pedido.id_pedido = detalle_pedido.id_pedido';
-
-$res = $conn->prepare($query);
- //exit($query);
-$res->fetchAll(PDO::FETCH_OBJ);
-$res->execute();
-print_r($res->errorInfo());
 
 // Consulta para traerme los IDs de Pedidos
 
@@ -67,101 +57,35 @@ print_r($res2->errorInfo());
             
             </div>
           </nav>
-
-
-
-
-
     
 <!-- AQUI IRÁ EL FORM -->
 
-<form method="POST" name="search" action="tabladetllepedido.php">
-        <div id="demo-grid">
-            <div class="search-box">
-                <select id="pedido" name="pedido[]" multiple="multiple">
-                    <option value="0" selected="selected">Seleccione Pedido</option>
-                        <?php
-                        if (! empty($countryResult)) {
-                            foreach ($countryResult as $key => $value) {
-                                echo '<option value="' . $countryResult[$key]['Country'] . '">' . $countryResult[$key]['Country'] . '</option>';
-                            }
-                        }
-                        ?>
-                </select><br> <br>
-                <button id="Filter">Search</button>
-            </div>
-            
-                <?php
-                if (! empty($_POST['country'])) {
-                    ?>
-                    <table cellpadding="10" cellspacing="1">
+<form method="POST" name="search" action="tabladetallepedidos.php">
+<div class="form-group">
+          <label for="categoria">Busque pedido</label>
+          <select name="selectpedido" class="form-control" id="pedido">
+          
+        <?php
 
-                <thead>
-                    <tr>
-                        <th><strong>Name</strong></th>
-                        <th><strong>Gender</strong></th>
-                        <th><strong>Country</strong></th>
-                    </tr>
-                </thead>
-                <tbody>
-                <?php
-                    $query = "SELECT * from tbl_user";
-                    $i = 0;
-                    $selectedOptionCount = count($_POST['country']);
-                    $selectedOption = "";
-                    while ($i < $selectedOptionCount) {
-                        $selectedOption = $selectedOption . "'" . $_POST['country'][$i] . "'";
-                        if ($i < $selectedOptionCount - 1) {
-                            $selectedOption = $selectedOption . ", ";
-                        }
-                        
-                        $i ++;
-                    }
-                    $query = $query . " WHERE country in (" . $selectedOption . ")";
-                    
-                    $result = $db_handle->runQuery($query);
-                }
-                if (! empty($result)) {
-                    foreach ($result as $key => $value) {
-                        ?>
-                <tr>
-                        <td><div class="col" id="user_data_1"><?php echo $result[$key]['Name']; ?></div></td>
-                        <td><div class="col" id="user_data_2"><?php echo $result[$key]['Gender']; ?> </div></td>
-                        <td><div class="col" id="user_data_3"><?php echo $result[$key]['Country']; ?> </div></td>
-                    </tr>
-                <?php
-                    }
-                    ?>
-                    
-                </tbody>
-            </table>
-            <?php
-                }
-                ?>  
+            while($rows = $res2->fetch(PDO::FETCH_ASSOC))
+
+              {
+
+          ?>
+
+              <option value="<?php echo $rows['id_pedido'];?>"><?php echo $rows['id_pedido'];?></option>
+
+          <?php 
+              }
+        ?> 
+          
+          </select>
         </div>
-    </form>
+        <button type="submit" id="Filter">Search</button>
+           
+            
 
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- AQUI TERMINARÁ EL FORM -->
-
-
-
-
-
-
-
-
+                        
     <table class="table">
         <thead class="thead-dark">
           <tr>
@@ -174,18 +98,43 @@ print_r($res2->errorInfo());
         </thead>
         <tbody>
 
+<?php
+
+$pedido = $_POST['selectpedido'];
+$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING );
+
+$query = 'SELECT pedido.id_pedido , detalle_pedido.nombre_playera ,
+ detalle_pedido.numero_playera , detalle_pedido.talla_short , detalle_pedido.talla_playera 
+ from pedido inner join detalle_pedido on pedido.id_pedido = detalle_pedido.id_pedido
+ where pedido.id_pedido in ("'.$pedido.'")';
+
+$res = $conn->prepare($query);
+ //exit($query);
+$res->fetchAll(PDO::FETCH_OBJ);
+$res->execute();
+print_r($res->errorInfo());
+
+        
+
+?>
 <?php foreach ($res as $pedido) {?>
            <tr>
            <td><?php echo $pedido['id_pedido'] ?></td>
-           <td><?php echo $pedido['nombre'] ?></td>
-           <td><?php echo $pedido['nombre_producto'] ?></td>
-           <td><?php echo $pedido['cantidad'] ?></td>
-           <td><?php echo $pedido['fecha_salida'] ?></td>
+           <td><?php echo $pedido['nombre_playera'] ?></td>
+           <td><?php echo $pedido['numero_playera'] ?></td>
+           <td><?php echo $pedido['talla_short'] ?></td>
+           <td><?php echo $pedido['talla_playera'] ?></td>
            </tr>
 <?php } ?>
+ </tbody>
+ </table>                  
+                
+                
+        </div>
+    </form>
 
-        </tbody>
-      </table>
+
+<!-- AQUI TERMINARÁ EL FORM -->
 
 
 </body>
