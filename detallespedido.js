@@ -31,6 +31,9 @@ cookies["MyCookie"]
 
 console.log(cookies);
 
+var val = cookies["MyCookie"];
+
+console.log(val);
 var timesSubmitted = 0;
 
 // Call function to submit form
@@ -43,7 +46,7 @@ $("#boton").click(function(e){
 
   // Check if user has submitted form more than 5 times
 
-  if (timesSubmitted < 3) {
+  if (timesSubmitted < val) {
 
       $.ajax({
 
@@ -60,7 +63,8 @@ $("#boton").click(function(e){
       });
   }else{
       // Alert user they can not sumbit anymore!
-      alert('You may only submit this 5 times per minute!');
+      alert('No puedes llenar mas campos');
+      $("#boton").attr("disabled", true);
       
   }
 }
