@@ -20,7 +20,16 @@ $( document ).ready(function() {
         // });
     // 
 
-    // Setup variable for easy tracking!!!
+    // Setup variable tracking
+    var cookies = document.cookie.split(";").
+    map(function(el){ return el.split("="); }).
+    reduce(function(prev,cur){ prev[cur[0]] = cur[1];return prev },{});
+
+cookies["MyCookie"] 
+
+
+
+console.log(cookies);
 
 var timesSubmitted = 0;
 
@@ -34,7 +43,7 @@ $("#boton").click(function(e){
 
   // Check if user has submitted form more than 5 times
 
-  if (timesSubmitted < 5) {
+  if (timesSubmitted < 3) {
 
       $.ajax({
 
