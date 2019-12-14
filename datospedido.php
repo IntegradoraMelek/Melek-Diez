@@ -27,6 +27,11 @@ $descripcion = $_POST["descripcion"];
 $total = $cantidad * $precio;
 
 
+$_SESSION['cantidad'] = $cantidad;
+
+
+setcookie("MyCookie", $cantidad);
+
 
 $pdo->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING );
 
