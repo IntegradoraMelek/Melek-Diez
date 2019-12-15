@@ -172,7 +172,18 @@ print_r($res2->errorInfo());
 
     </form>
 
-  
+    <?php
+
+   $categoria = $_POST['selectcategoria'];
+
+    $query = 'SELECT * from producto where id_producto in ("'.$categoria.'")';
+$res = $conn->prepare($query);
+ //exit($query);
+$res->fetchAll(PDO::FETCH_OBJ);
+$res->execute();
+print_r($res->errorInfo());
+
+?>
 
       <div class="row">
         <?php
