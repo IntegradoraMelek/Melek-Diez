@@ -63,7 +63,13 @@ $("#boton").click(function(e){
       });
   }else{
       // Alert user they can not sumbit anymore!
-      alert('No puedes llenar mas campos');
+    //  alert('No puedes llenar mas campos');
+      swal({
+        title: "Haz concluido",
+        text: "Tus registros coinciden con la cantidad pedida",
+        icon: "success",
+        button: "Terminar",
+      });
       $("#boton").attr("disabled", true);
       
   }
