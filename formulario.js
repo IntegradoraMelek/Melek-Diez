@@ -7,7 +7,7 @@ $(document).ready(function () {
             nombre: {
                 minlength: 2,
                 required: true,
-                rangelength: [10,15]
+                rangelength: [3,15]
             },
             apellido1: {
                 minlength: 2,
