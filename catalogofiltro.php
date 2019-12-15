@@ -9,7 +9,7 @@ $res = $conn->prepare($query);
  //exit($query);
 $res->fetchAll(PDO::FETCH_OBJ);
 $res->execute();
-print_r($res->errorInfo());
+// print_r($res->errorInfo());
 
 // Query para Categorias
 $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING );
@@ -18,7 +18,7 @@ $res2 = $conn->prepare($query2);
  //exit($query);
 $res2->fetchAll(PDO::FETCH_OBJ);
 $res2->execute();
-print_r($res2->errorInfo());
+// print_r($res2->errorInfo());
 
 
 
@@ -81,7 +81,7 @@ print_r($res2->errorInfo());
               <a class="nav-link" href="index.php">Inicio<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="Catalogo.php" role="button" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link" href="catalogo2.php" role="button" aria-haspopup="true" aria-expanded="false">
                 Catálogo
                 <p><?php echo ($_SESSION['id_usuario']);?></p>
               </a>
@@ -176,12 +176,12 @@ print_r($res2->errorInfo());
 
    $categoria = $_POST['selectcategoria'];
 
-    $query = 'SELECT * from producto where id_producto in ("'.$categoria.'")';
+    $query = 'SELECT * from producto where id_categoria in ("'.$categoria.'")';
 $res = $conn->prepare($query);
  //exit($query);
 $res->fetchAll(PDO::FETCH_OBJ);
 $res->execute();
-print_r($res->errorInfo());
+// print_r($res->errorInfo());
 
 ?>
 
@@ -194,6 +194,7 @@ print_r($res->errorInfo());
               <img class="card-img-top pointer" src="PanelAdmin/imagenes/<?php echo $imagen['imagen'] ?>">
               
                 <input type="hidden" id="custId" name="id" value="<?php echo $imagen['id_producto'] ?>">
+                <button type="submit" class="btn btn-primary"><?php echo $imagen['nombre_producto'] ?></button>
                 <button type="submit" class="btn btn-success"><?php echo $imagen['precio_unitario'] ?></button>
               </form>
             </div>
