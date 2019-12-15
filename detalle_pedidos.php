@@ -125,8 +125,9 @@
     </select>
   </div>
 
+  <button type="button" id="botoncont" class="btn btn-dark btn-lg btn-block">Registros por hacer: <?php echo $_SESSION['cantidad'] ?></button>
 
-  <button id="boton" class="btn btn-primary mb-2">Submit</button>
+  <button id="boton" style="margin-top: 10px;" class="btn btn-primary mb-2">Submit</button>
                
               </div>
             </form>

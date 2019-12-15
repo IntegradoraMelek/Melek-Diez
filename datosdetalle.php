@@ -27,6 +27,6 @@ $res = $conn->prepare($query);
 
 $res->execute();
 
-print_r($res->errorInfo());
+// print_r($res->errorInfo());
 
 

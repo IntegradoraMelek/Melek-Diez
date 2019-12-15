@@ -86,7 +86,6 @@ $fecha3 = $fechaentrega->format('Y-m-d');
             <a id="text" class="nav-link" href="catalogo2.php" role="button" aria-haspopup="true" aria-expanded="false">
               Catálogo
               <p><?php echo ($_SESSION['id_usuario']);?></p>
-              
             </a>
           </li>
           <li class="nav-item active">

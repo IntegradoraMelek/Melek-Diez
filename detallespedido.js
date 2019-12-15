@@ -1,6 +1,11 @@
 $( document ).ready(function() {
 
 
+  //Habilitar popovers
+
+  $(function () {
+    $('[data-toggle="popover"]').popover()
+  })
         // $("#boton").click(function(e){
 
         //     e.preventDefault();
@@ -59,9 +64,12 @@ $("#boton").click(function(e){
                           
               // Add for submission to counter
               timesSubmitted++;
+              $("#botoncont").text("Registros por hacer:" + (--val));
             }
       });
   }else{
+    $("#formdetalle").trigger('reset');
+    $("#botoncont").text("Registros por hacer:" + 0);
       // Alert user they can not sumbit anymore!
     //  alert('No puedes llenar mas campos');
       swal({
