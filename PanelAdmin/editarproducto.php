@@ -127,7 +127,7 @@ $stmt->execute();
   </div>    
           
 
-        <button type="submit" class="btn btn-primary mb-2">Guardar cambios</button>
+        <button type="submit" class="btn btn-primary mb-2 btn-block">Guardar cambios</button>
       </form>
     </div>
             </header>

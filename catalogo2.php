@@ -38,7 +38,6 @@ $res2->execute();
   <a href="https://icons8.com/icon/13963/twitter"></a>
   <link rel="stylesheet" href="CSS PAG/estilos.css">
   <link rel="stylesheet" href="styles.css">
-  <script src="https://unpkg.com/scrollreveal"></script>
   <link rel="stylesheet" href="CSS PAG/hover.css">
   <title>MELEK DIEZ</title>
 
@@ -71,7 +70,7 @@ $res2->execute();
    
     <header class="header shadow" style="background-image: url('658972.jpg');">
       <nav id="barra" class="navbar navbar-expand-lg navbar-dark" style="font-size: 20px;">
-        <h1 id="melek" class="text-white"><span class="resaltado">MELEK</span>DIEZ</h1>
+      <img src="img/logo-melek.png" width="120px">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -197,4 +196,6 @@ $res2->execute();
 </body>
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+
 </html>

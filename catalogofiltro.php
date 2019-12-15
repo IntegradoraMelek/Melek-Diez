@@ -71,7 +71,8 @@ $res2->execute();
    
     <header class="header shadow" style="background-image: url('658972.jpg');">
       <nav id="barra" class="navbar navbar-expand-lg navbar-dark" style="font-size: 20px;">
-        <h1 id="melek" class="text-white"><span class="resaltado">MELEK</span>DIEZ</h1>
+      <img src="img/logo-melek.png" width="120px">
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
