@@ -45,6 +45,14 @@ $stmt->execute();
     <title>Panel de Administrador</title>
 </head>
 <body>
+<?php
+session_start();
+
+  if (!isset($_SESSION['usuario'])) {
+    header("location:login.php");
+  }
+
+  ?>
 
 <header class="header shadow topnav" style="background-image: url('312997-P8IMY8-496.jpg'); background-size: 100% 100%;">
   <nav id="barra" class="navbar navbar-expand-lg navbar-light" style="font-size: 20px;">

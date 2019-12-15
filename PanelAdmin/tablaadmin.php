@@ -26,6 +26,15 @@ $res->execute();
 </head>
 <body>
 
+<?php
+session_start();
+
+  if (!isset($_SESSION['usuario'])) {
+    header("location:login.php");
+  }
+
+  ?>
+
 
 <nav id="barra" class="navbar navbar-expand-lg navbar-light" style="font-size: 20px;">
     <img src="../img/logo-melek.png" width="100px">

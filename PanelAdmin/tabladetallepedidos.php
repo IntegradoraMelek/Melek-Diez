@@ -10,7 +10,7 @@ $res2 = $conn->prepare($query2);
  //exit($query);
 $res2->fetchAll(PDO::FETCH_OBJ);
 $res2->execute();
-print_r($res2->errorInfo());
+// print_r($res2->errorInfo());
 
 
 ?>
@@ -27,6 +27,15 @@ print_r($res2->errorInfo());
     <title>Tabla Mostrar</title>
 </head>
 <body>
+
+<?php
+session_start();
+
+  if (!isset($_SESSION['usuario'])) {
+    header("location:login.php");
+  }
+
+  ?>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">MELEK ADMIN</a>

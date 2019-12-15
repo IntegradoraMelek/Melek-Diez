@@ -6,5 +6,5 @@ $query = 'INSERT INTO categoria (nombre_categoria) values ("'.$nombre.'")';
 // exit($query);
 $res = $conn->prepare($query);
 $res->execute();
-print_r($res->errorInfo());
-?>
+// print_r($res->errorInfo());
+header("Location: tablacategorias.php");
