@@ -102,7 +102,8 @@ $stmt->execute();
                   <div class="form-group">
           <label for="categoria">Categoria</label>
           <select name="selectcategoria" class="form-control" id="categoria">
-          
+          <option value="" selected disabled hidden>Elija</option>
+
         <?php
 
             while($rows = $stmt->fetch(PDO::FETCH_ASSOC))
@@ -123,11 +124,7 @@ $stmt->execute();
         <div class="form-group">
     <label for="descripcion">Descripcion</label>
     <textarea class="form-control" id="descripcion" name="descripcion" rows="3"><?php echo $producto->descripcion ?></textarea>
-  </div>
-
-  <label for="imagen" class="control-label">imagen</label>
-    <input type="file" accept="image/*" class="form-control" id="imagen" name="imagen" required="" placeholder="" >    
-       
+  </div>    
           
 
         <button type="submit" class="btn btn-primary mb-2">Guardar cambios</button>

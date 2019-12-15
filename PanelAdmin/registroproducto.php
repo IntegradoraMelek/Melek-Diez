@@ -81,7 +81,8 @@ $stmt->execute();
         <div class="form-group">
           <label for="categoria">Categoria</label>
           <select name="selectcategoria" class="form-control" id="categoria">
-          
+          <option value="" selected disabled hidden>Elija</option>
+
         <?php
 
             while($rows = $stmt->fetch(PDO::FETCH_ASSOC))
