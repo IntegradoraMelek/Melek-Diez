@@ -22,5 +22,7 @@ $res->execute([$nombre, $precio, $descripcion, $categoria, $id]);
 
 print_r($res->errorInfo());
 
+header('Location: tablaadmin.php');
+
 
  

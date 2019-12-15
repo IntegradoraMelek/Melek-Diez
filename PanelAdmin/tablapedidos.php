@@ -49,10 +49,10 @@ $res->execute();
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="altacategoria.html">Agegar categorías</a>
-            <a class="dropdown-item" href="">Lista de categorías</a>
+            <a class="dropdown-item" href="tablacategorias.php">Lista de categorías</a>
         </li>
             <li class="nav-item">
-              <a id="text"class="nav-link" href="#">Usuarios</a>
+              <a id="text"class="nav-link" href="tablausuarios.php">Usuarios</a>
             </li>
             <li class="nav-item">
               <a id="text"class="nav-link" href="tablapedidos.php">Pedidos</a>
