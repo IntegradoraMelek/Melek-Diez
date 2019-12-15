@@ -13,7 +13,7 @@ class User{
     private $correo_electronico;
     private $telefono;
     private $rol = 1;
-    private $pdo;
+    
     
     public function __construct(){
         $this->pdo = new Conexion();
