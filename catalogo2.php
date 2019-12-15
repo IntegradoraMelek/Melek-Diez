@@ -1,3 +1,30 @@
+<?php
+
+
+  require 'PanelAdmin/conexion2.php';
+  
+  
+$query = 'SELECT * from producto';
+$res = $conn->prepare($query);
+ //exit($query);
+$res->fetchAll(PDO::FETCH_OBJ);
+$res->execute();
+print_r($res->errorInfo());
+
+// Query para Categorias
+$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING );
+$query2 = 'SELECT * from categoria';
+$res2 = $conn->prepare($query2);
+ //exit($query);
+$res2->fetchAll(PDO::FETCH_OBJ);
+$res2->execute();
+print_r($res2->errorInfo());
+
+
+
+  ?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -27,20 +54,7 @@
 </head>
 
 <body>
-  <?php
-
   
-
-  require 'PanelAdmin/conexion2.php';
-  $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING );
-$query = 'SELECT * from producto';
-$res = $conn->prepare($query);
- //exit($query);
-$res->fetchAll(PDO::FETCH_OBJ);
-$res->execute();
-print_r($res->errorInfo());
-
-  ?>
 
   <div>
     <?php
@@ -132,6 +146,45 @@ print_r($res->errorInfo());
     </header>
 
     <div class="container">
+<form action="catalogo2.php" method="POST">
+    <div class="form-group">
+         <h5><label for="categoria">Busque categoría</label></h5>
+          <select name="selectcategoria" class="form-control" id="categoria">
+          
+        <?php
+
+            while($rows2 = $res2->fetch(PDO::FETCH_ASSOC))
+
+              {
+
+          ?>
+
+              <option value="<?php echo $rows2['id_categoria'];?>"><?php echo $rows2['nombre_categoria'];?></option>
+
+          <?php 
+              }
+        ?> 
+          
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Buscar</button>
+
+    </form>
+
+    <?php
+
+   $categoria = $_POST['selectcategoria'];
+
+    $query = 'SELECT * from producto where id_producto in ("'.$categoria.'")';
+$res = $conn->prepare($query);
+ //exit($query);
+$res->fetchAll(PDO::FETCH_OBJ);
+$res->execute();
+print_r($res->errorInfo());
+
+?>
+
       <div class="row">
         <?php
         foreach ($res as $imagen) {
