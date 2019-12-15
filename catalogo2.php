@@ -78,12 +78,11 @@ $res2->execute();
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
           <ul class="navbar-nav m-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="index.php">Inicio<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="index.php">Inicio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="catalogo2.php" role="button" aria-haspopup="true" aria-expanded="false">
-                Catálogo
-                <p><?php echo ($_SESSION['id_usuario']);?></p>
+                Catálogo<span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
@@ -150,7 +149,8 @@ $res2->execute();
     <div class="form-group">
          <h5><label for="categoria">Busque categoría</label></h5>
           <select name="selectcategoria" class="form-control" id="categoria">
-          
+          <option value="" selected disabled hidden>Elija</option>
+
         <?php
 
             while($rows2 = $res2->fetch(PDO::FETCH_ASSOC))
@@ -195,5 +195,6 @@ $res2->execute();
   </div>
 
 </body>
-
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
 </html>

@@ -148,7 +148,7 @@ if (isset($_SESSION['usuario'])) {
 
     <div class="container">
       <div class="row justify-content-center">
-        <div class="card shadow" style=" margin-top: 30px; width: 500px; height: 600px; background-color: rgb(0,0,0,0.7); color: white;">
+        <div class="card shadow" style=" margin-top: 30px; width: 500px; height: 800px; background-color: rgb(0,0,0,0.7); color: white;">
           <div class="card-body">
             <div class="text-center">
               <label style="font-size: 30px;">Pedidos</label>
@@ -159,6 +159,7 @@ if (isset($_SESSION['usuario'])) {
               <div class="form-group">
                 <label for="selectproducto">Seleccione el uniforme a pedir</label>
                 <select name="selectproducto" class="form-control" id="selectproducto">
+                <option value="" selected disabled hidden>Elija</option>
 
 
                   <?php
@@ -188,6 +189,8 @@ if (isset($_SESSION['usuario'])) {
               <div class="form-group">
                 <label for="cantidad">Seleccione cantidad de uniformes</label>
                 <select class="form-control" name="cantidad" id="cantidad">
+                <option value="" selected disabled hidden>Cantidad</option>
+
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -221,14 +224,10 @@ if (isset($_SESSION['usuario'])) {
                 <input type="text" value="<?php echo ($fecha3) ?>" class="form-control" name="fechaentrega" id="fechaentrega" placeholder="">
               </div>
 
-              <button type="submit" class="btn btn-primary mb-2">Continuar</button>
+              <button type="submit"  style="margin-top: 10px;" class="btn btn-primary mb-2 btn-block">Continuar</button>
 
 
-              <div class="text-center">
-                <button type="submit" class="btn btn-primary" class="form-group">
-                  <a href="" style="color: white; text-decoration: none;">Continuar</a>
-                </button>
-              </div>
+             
             </form>
           </div>
         </div>

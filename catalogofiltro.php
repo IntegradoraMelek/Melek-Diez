@@ -150,7 +150,8 @@ $res2->execute();
     <div class="form-group">
          <h5><label for="categoria">Busque categoría</label></h5>
           <select name="selectcategoria" class="form-control" id="categoria">
-          
+          <option value="" selected disabled hidden>Elija</option>
+
         <?php
 
             while($rows2 = $res2->fetch(PDO::FETCH_ASSOC))
