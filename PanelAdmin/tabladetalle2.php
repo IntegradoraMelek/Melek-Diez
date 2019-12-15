@@ -98,6 +98,34 @@ print_r($res2->errorInfo());
         </thead>
         <tbody>
 
+<?php
+
+$pedido = $_POST['selectpedido'];
+$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING );
+
+$query = 'SELECT pedido.id_pedido , detalle_pedido.nombre_playera ,
+ detalle_pedido.numero_playera , detalle_pedido.talla_short , detalle_pedido.talla_playera 
+ from pedido inner join detalle_pedido on pedido.id_pedido = detalle_pedido.id_pedido
+ where pedido.id_pedido in ("'.$pedido.'")';
+
+$res = $conn->prepare($query);
+ //exit($query);
+$res->fetchAll(PDO::FETCH_OBJ);
+$res->execute();
+print_r($res->errorInfo());
+
+        
+
+?>
+<?php foreach ($res as $pedido) {?>
+           <tr>
+           <td><?php echo $pedido['id_pedido'] ?></td>
+           <td><?php echo $pedido['nombre_playera'] ?></td>
+           <td><?php echo $pedido['numero_playera'] ?></td>
+           <td><?php echo $pedido['talla_short'] ?></td>
+           <td><?php echo $pedido['talla_playera'] ?></td>
+           </tr>
+<?php } ?>
  </tbody>
  </table>                  
                 
