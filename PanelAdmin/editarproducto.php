@@ -124,6 +124,10 @@ $stmt->execute();
     <label for="descripcion">Descripcion</label>
     <textarea class="form-control" id="descripcion" name="descripcion" rows="3"><?php echo $producto->descripcion ?></textarea>
   </div>
+
+  <label for="imagen" class="control-label">imagen</label>
+    <input type="file" accept="image/*" class="form-control" id="imagen" name="imagen" required="" placeholder="" >    
+       
           
 
         <button type="submit" class="btn btn-primary mb-2">Guardar cambios</button>

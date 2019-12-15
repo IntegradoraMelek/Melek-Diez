@@ -28,6 +28,7 @@ $res = $conn->prepare($query);
 $res->execute();
 
 print_r($res->errorInfo());
+header('Location: tablaadmin.php');
 
 // if($res === TRUE) 
 // echo "Inserción realizada con éxito";

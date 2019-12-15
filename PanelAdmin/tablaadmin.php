@@ -1,7 +1,9 @@
 <?php
 require 'conexion2.php';
 $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING );
-$query = 'SELECT id_producto, nombre_producto, precio_unitario, descripcion , id_categoria from producto';
+$query = 'SELECT producto.id_producto, producto.nombre_producto, producto.precio_unitario, 
+producto.descripcion , categoria.nombre_categoria 
+from producto inner join categoria on producto.id_categoria = categoria.id_categoria';
 $res = $conn->prepare($query);
  //exit($query);
 $res->fetchAll(PDO::FETCH_OBJ);
@@ -82,7 +84,7 @@ $res->execute();
            <td><?php echo $producto['nombre_producto'] ?></td>
            <td><?php echo $producto['precio_unitario'] ?></td>
            <td><?php echo $producto['descripcion'] ?></td>
-           <td><?php echo $producto['id_categoria'] ?></td>
+           <td><?php echo $producto['nombre_categoria'] ?></td>
            <td><a href="<?php echo 'editarproducto.php?id=' . $producto['id_producto']?>">Editar</a></td>
            </tr>
 <?php } ?>
