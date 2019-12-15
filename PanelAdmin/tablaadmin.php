@@ -6,8 +6,8 @@ $res = $conn->prepare($query);
  //exit($query);
 $res->fetchAll(PDO::FETCH_OBJ);
 $res->execute();
-print_r($res->errorInfo());
-var_dump($res);
+//print_r($res->errorInfo());
+
 
 ?>
 
@@ -24,40 +24,47 @@ var_dump($res);
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">MELEK ADMIN</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Productos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Categorias</a>
-                  </li>
-                  <li class="nav-item">
-                  <a class="nav-link" href="#">Usuarios</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pedidos</a>
-                  </li>
-               
-               
-              </ul>
-            
-            </div>
-          </nav>
+
+<nav id="barra" class="navbar navbar-expand-lg navbar-light" style="font-size: 20px;">
+    <img src="../img/logo-melek.png" width="100px">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul class="navbar-nav m-auto">
+        <li class="nav-item ">
+          <a id="text" class="nav-link" href="index.php">Inicio<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Productos
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="registroproducto.php">Agegar productos</a>
+            <a class="dropdown-item" href="tablaadmin.php">Lista de productos</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Categorías
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="altacategoria.html">Agegar categorías</a>
+            <a class="dropdown-item" href="">Lista de categorías</a>
+        </li>
+            <li class="nav-item">
+              <a id="text"class="nav-link" href="#">Usuarios</a>
+            </li>
+            <li class="nav-item">
+              <a id="text"class="nav-link" href="tablapedidos.php">Pedidos</a>
+            </li>
+      </ul>
+    </div>        
+</nav>
     
 
 
-    <table class="table">
-        <thead class="thead-dark">
+    <table class="table table table-hover table-dark">
+        <thead class="bg-primary">
           <tr>
             <th scope="col">ID</th>
             <th scope="col">Nombre</th>
@@ -65,7 +72,6 @@ var_dump($res);
             <th scope="col">Descripcion</th>
             <th scope="col">Categoria/Liga</th>
             <th scope="col">Editar</th>
-            <th scope="col">Eliminar</th>
           </tr>
         </thead>
         <tbody>
@@ -78,7 +84,6 @@ var_dump($res);
            <td><?php echo $producto['descripcion'] ?></td>
            <td><?php echo $producto['id_categoria'] ?></td>
            <td><a href="<?php echo 'editarproducto.php?id=' . $producto['id_producto']?>">Editar</a></td>
-           <td><a href="<?php echo 'eliminarproducto.php?id=' . $producto['id_producto']?>">Eliminar</a></td>
            </tr>
 <?php } ?>
 

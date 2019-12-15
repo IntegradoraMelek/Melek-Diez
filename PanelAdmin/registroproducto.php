@@ -36,17 +36,27 @@ $stmt->execute();
         <li class="nav-item ">
           <a id="text" class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-            <a id="text"class="nav-link" href="#">Productos</a>
-          </li>
-          <li class="nav-item">
-              <a id="text"class="nav-link" href="#">Categorias</a>
-            </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Productos
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="registroproducto.php">Agegar productos</a>
+            <a class="dropdown-item" href="tablaadmin.php">Lista de productos</a>
+        </li>
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Categorías
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="altacategoria.html">Agegar categorías</a>
+            <a class="dropdown-item" href="">Lista de categorías</a>
+        </li>
             <li class="nav-item">
               <a id="text"class="nav-link" href="#">Usuarios</a>
             </li>
             <li class="nav-item">
-              <a id="text"class="nav-link" href="#">Pedidos</a>
+              <a id="text"class="nav-link" href="tablapedidos.php">Pedidos</a>
             </li>
       </ul>
     </div>        
@@ -104,4 +114,6 @@ $stmt->execute();
     </div>
     </header>
 </body>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
 </html>
