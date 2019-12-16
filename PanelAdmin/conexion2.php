@@ -6,7 +6,7 @@
 
 
 
-$password = "root";
+$password = "";
 $user = "root";
 $dbname = 'melek3A';
 

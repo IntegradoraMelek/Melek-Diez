@@ -48,7 +48,7 @@ if (!isset($_SESSION['usuario'])) {
             <a id="text" class="nav-link" href="index.php">Inicio<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a id="text" class="nav-link" href="Catalogo.php" role="button" aria-haspopup="true" aria-expanded="false">
+            <a id="text" class="nav-link" href="catalogo2.php" role="button" aria-haspopup="true" aria-expanded="false">
               Catálogo
             </a>
           </li>
