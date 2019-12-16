@@ -157,7 +157,7 @@ if (isset($_SESSION['usuario'])) {
 
               <div class="form-group">
                 <label for="selectproducto">Seleccione el uniforme a pedir</label>
-                <select name="selectproducto" class="form-control" id="selectproducto">
+                <select name="selectproducto" class="form-control" required id="selectproducto">
                 <option value="" selected disabled hidden>Elija</option>
 
 
@@ -182,12 +182,12 @@ if (isset($_SESSION['usuario'])) {
 
               <div class="form-group">
                 <label for="precioUnitario">Precio Unitario</label>
-                <label for="precioUnitario" name="preciounitario" id="preciopro">0.00</label>
+                <label for="precioUnitario" name="preciounitario" required id="preciopro">0.00</label>
               </div>
 
               <div class="form-group">
                 <label for="cantidad">Seleccione cantidad de uniformes</label>
-                <select class="form-control" name="cantidad" id="cantidad">
+                <select class="form-control" name="cantidad" required id="cantidad">
                 <option value="" selected disabled hidden>Cantidad</option>
 
                   <option value="1">1</option>

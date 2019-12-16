@@ -99,17 +99,17 @@
   
               <div class="form-group">
     <label for="nombre">Nombre</label>
-    <input type="text" class="form-control" name="nombre" id="nombre" placeholder="">
+    <input type="text" class="form-control" name="nombre" id="nombre" required placeholder="">
   </div>
 
   <div class="form-group">
     <label for="numero">Numero</label>
-    <input type="text" class="form-control" name="numero" id="numero" placeholder="">
+    <input type="text" class="form-control" name="numero" id="numero" required placeholder="">
   </div>
 
 <div class="form-group">
     <label for="selectshort">Talla short</label>
-    <select class="form-control" name="selectshort" id="selectshort">
+    <select class="form-control" name="selectshort" id="selectshort" required>
     <option value="" selected disabled hidden>Elija</option>
       <option value="chico">Chico</option>
       <option value="mediano">Mediano</option>
@@ -119,7 +119,7 @@
 
   <div class="form-group">
     <label for="selectplayera">Talla playera</label>
-    <select class="form-control" name="selectplayera" id="selectplayera">
+    <select class="form-control" name="selectplayera" required id="selectplayera">
     <option value="" selected disabled hidden>Elija</option>
       <option value="chica">Chica</option>
       <option value="mediana">Mediana</option>
