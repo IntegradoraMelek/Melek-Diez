@@ -25,6 +25,10 @@ if (!isset($_POST['correo_electronico']) || !isset($_POST['contrasena'])){
                     $_SESSION['rol'] = $result['rol'];
 
                     header("Location: ../index.php");
+                    if($_SESSION['rol'] == '0')
+                    {
+                      header("location: ../PanelAdmin/paneladminmain.php");
+                    }
                 }else{
                     header("Location: ../login.php");
                     //header("Location:../view/index.php?c3=error");

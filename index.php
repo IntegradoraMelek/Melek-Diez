@@ -29,12 +29,12 @@
 
   session_start();
   
-    if(isset($_SESSION['usuario'])){
-      if($_SESSION['rol'] == '0')
-      {
-        header("location: PanelAdmin/paneladminmain.php");
-      }
-    }
+    // if(isset($_SESSION['usuario'])){
+    //   // if($_SESSION['rol'] == '0')
+    //   // {
+    //   //   header("location: PanelAdmin/paneladminmain.php");
+    //   // }
+    // }
   
   
  /* if (isset($_SESSION['usuario'])) {
