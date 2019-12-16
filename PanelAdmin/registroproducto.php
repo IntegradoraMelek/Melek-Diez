@@ -68,7 +68,28 @@ session_start();
               <a id="text"class="nav-link" href="tablapedidos.php">Pedidos</a>
             </li>
       </ul>
-    </div>        
+    </div>    
+    <?php
+
+if (isset($_SESSION['usuario'])) {
+  ?>
+        <ul class="navbar-nav ml-auto nav-flex-icons">
+          <li class="nav-item dropdown ">
+            <ul class="navbar-nav ml-auto nav-flex-icons">
+              <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle icon-torso" id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-user"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+                  <a class="dropdown-item" href="php/cerrarSession.php">Cerrar</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+<?php
+}
+?>    
 </nav>
     
 <div class="containerform">

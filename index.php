@@ -32,7 +32,7 @@
     if(isset($_SESSION['usuario'])){
       if($_SESSION['rol'] == '0')
       {
-        header("location: PanelAdmin/paneladminmain.html");
+        header("location: PanelAdmin/paneladminmain.php");
       }
     }
   
