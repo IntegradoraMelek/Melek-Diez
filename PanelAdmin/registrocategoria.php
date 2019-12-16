@@ -100,7 +100,7 @@ if (isset($_SESSION['usuario'])) {
       <form method="POST" action="altacategoria.php">
         <div class="form-group">
           <label for="nombre_categoria">Nombre</label>
-          <input type="text" class="form-control" name="nombre_categoria" id="nombre_categoria" placeholder="Nombre">
+          <input type="text" class="form-control" name="nombre_categoria" id="nombre_categoria" required placeholder="Nombre">
         </div>
 
         <button type="submit" class="btn btn-primary mb-2">Agregar</button>
