@@ -82,7 +82,7 @@ $res->execute();
                   <i class="fas fa-user"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-                  <a class="dropdown-item" href="php/cerrarSession.php">Cerrar</a>
+                  <a class="dropdown-item" href="../php/cerrarSession.php">Cerrar</a>
                 </div>
               </li>
             </ul>
