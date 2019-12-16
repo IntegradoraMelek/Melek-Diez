@@ -24,6 +24,8 @@ $res2->execute();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="paneladmin.css">
+    <link rel="stylesheet" href="../CSS PAG/estilos.css">
+
     <title>Tabla Mostrar</title>
 </head>
 <body>
@@ -37,34 +39,51 @@ session_start();
 
   ?>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">MELEK ADMIN</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Productos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Categorias</a>
-                  </li>
-                  <li class="nav-item">
-                  <a class="nav-link" href="#">Usuarios</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pedidos<span class="sr-only">(current)</a>
-                  </li>
-               
-               
-              </ul>
-            
-            </div>
+<header class="header shadow topnav">
+  <nav id="barra" class="navbar navbar-expand-lg navbar-light" style="font-size: 20px;">
+    <!-- <img src="../img/logo-melek.png" width="100px"> -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul class="navbar-nav m-auto">
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Inicio
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="paneladminmain.php">Inicio Admin</a>
+            <a class="dropdown-item" href="../index.php">Inicio sitio web</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Productos
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="registroproducto.php">Agregar productos</a>
+            <a class="dropdown-item" href="tablaadmin.php">Lista de productos</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Categorías
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="registrocategoria.php">Agregar categorías</a>
+            <a class="dropdown-item" href="tablacategorias.php">Lista de categorías</a>
+        </li>
+            <li class="nav-item">
+              <a id="text"class="nav-link" href="tablausuarios.php">Usuarios</a>
+            </li>
+            <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Pedidos
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="tablapedidos.php">Lista de pedidos</a>
+            <a class="dropdown-item" href="tabladetallepedidos.php">Ver detalles de pedidos</a>
+        </li>
+      </ul>
+    </div>
             <?php
 
 if (isset($_SESSION['usuario'])) {
@@ -86,11 +105,16 @@ if (isset($_SESSION['usuario'])) {
 <?php
 }
 ?>
+
+
+
+
           </nav>
     
 <!-- AQUI IRÁ EL FORM -->
 
-<form method="POST" name="search" action="tabladetalle2.php">
+
+<form method="POST" style="width: auto;" name="search" action="tabladetalle2.php">
 <div class="form-group">
           <label for="categoria">Busque pedido</label>
           <select name="selectpedido" class="form-control" id="pedido">
@@ -111,13 +135,13 @@ if (isset($_SESSION['usuario'])) {
           
           </select>
         </div>
-        <button type="submit" id="Filter">Search</button>
+        <button class="btn btn-primary" type="submit" id="Filter">Search</button>
            
             
 
                         
-    <table class="table">
-        <thead class="thead-dark">
+    <table class="table table-hover table-dark">
+        <thead class="bg-primary">
           <tr>
             <th scope="col">Pedido</th>
             <th scope="col">Nombre</th>
@@ -134,10 +158,12 @@ if (isset($_SESSION['usuario'])) {
                 
         </div>
     </form>
-
+    </header>
 
 <!-- AQUI TERMINARÁ EL FORM -->
 
 
 </body>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
 </html>

@@ -8,7 +8,7 @@ class Conexion extends \PDO
     private $host = 'localhost';
     private $dbname = 'melektwo';
     private $root = 'root';
-    private $pass= '';   
+    private $pass= 'root';   
     
     
     public function __construct(){

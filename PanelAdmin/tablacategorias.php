@@ -73,9 +73,14 @@ $res->execute();
           <li class="nav-item">
             <a id="text" class="nav-link" href="tablausuarios.php">Usuarios</a>
           </li>
-          <li class="nav-item">
-            <a id="text" class="nav-link" href="tablapedidos.php">Pedidos</a>
-          </li>
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Pedidos
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="tablapedidos.php">Lista de pedidos</a>
+            <a class="dropdown-item" href="tabladetallepedidos.php">Ver detalles de pedidos</a>
+        </li>
         </ul>
       </div>
       <?php
