@@ -38,7 +38,7 @@
           <li class="nav-item">
             <a class="nav-link" href="catalogo2.php" role="button" aria-haspopup="true" aria-expanded="false">
               Catalogo
-              <?php echo($_SESSION['lastId_pedido']);?>
+              
             </a>
           </li>
           <li class="nav-item">
