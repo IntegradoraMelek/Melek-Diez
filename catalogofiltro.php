@@ -57,9 +57,9 @@ $res2->execute();
 <?php
   session_start();
 
-  if (!isset($_SESSION['usuario'])) {
-    header("location:login.php");
-  }
+  // if (!isset($_SESSION['usuario'])) {
+  //   header("location:login.php");
+  // }
 
   ?>    
 
@@ -84,7 +84,6 @@ $res2->execute();
             <li class="nav-item">
               <a class="nav-link" href="catalogo2.php" role="button" aria-haspopup="true" aria-expanded="false">
                 Catálogo
-                <p><?php echo ($_SESSION['id_usuario']);?></p>
               </a>
             </li>
             <li class="nav-item">

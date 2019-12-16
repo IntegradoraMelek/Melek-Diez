@@ -17,9 +17,9 @@
 
   <?php
   session_start();
-  if (!isset($_SESSION['usuario'])) {
-    header("location:login.php");
-  }
+  // if (!isset($_SESSION['usuario'])) {
+  //   header("location:login.php");
+  // }
 
   ?>
   <header class="header2 topnav" style="background-image: url('312997-P8IMY8-496.jpg');">
