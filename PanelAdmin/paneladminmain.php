@@ -39,7 +39,7 @@ session_start();
            Productos
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="registroproducto.php">Agegar productos</a>
+            <a class="dropdown-item" href="registroproducto.php">Agregar productos</a>
             <a class="dropdown-item" href="tablaadmin.php">Lista de productos</a>
         </li>
         <li class="nav-item dropdown">
@@ -47,7 +47,7 @@ session_start();
            Categorías
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="registrocategoria.php">Agegar categorías</a>
+            <a class="dropdown-item" href="registrocategoria.php">Agregar categorías</a>
             <a class="dropdown-item" href="tablacategorias.php">Lista de categorías</a>
         </li>
             <li class="nav-item">
