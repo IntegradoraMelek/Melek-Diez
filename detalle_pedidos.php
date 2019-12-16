@@ -110,6 +110,7 @@
 <div class="form-group">
     <label for="selectshort">Talla short</label>
     <select class="form-control" name="selectshort" id="selectshort">
+    <option value="" selected disabled hidden>Elija</option>
       <option value="chico">Chico</option>
       <option value="mediano">Mediano</option>
       <option value="grande">Grande</option>
@@ -119,6 +120,7 @@
   <div class="form-group">
     <label for="selectplayera">Talla playera</label>
     <select class="form-control" name="selectplayera" id="selectplayera">
+    <option value="" selected disabled hidden>Elija</option>
       <option value="chica">Chica</option>
       <option value="mediana">Mediana</option>
       <option value="grande">Grande</option>

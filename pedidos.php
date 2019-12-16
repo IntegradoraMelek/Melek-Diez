@@ -80,17 +80,16 @@ $fecha3 = $fechaentrega->format('Y-m-d');
       <div class="collapse navbar-collapse " id="navbarSupportedContent">
         <ul class="navbar-nav m-auto">
           <li class="nav-item">
-            <a id="text" class="nav-link" href="index.php">Inicio<span class="sr-only">(current)</span></a>
+            <a id="text" class="nav-link" href="index.php">Inicio</a>
           </li>
           <li class="nav-item">
             <a id="text" class="nav-link" href="catalogo2.php" role="button" aria-haspopup="true" aria-expanded="false">
               Catálogo
-              <p><?php echo ($_SESSION['id_usuario']);?></p>
             </a>
           </li>
           <li class="nav-item active">
             <a id="text" class="nav-link" href="pedidos.php" role="button" aria-haspopup="true" aria-expanded="false">
-              Pedidos
+            <span class="sr-only">(current)</span> Pedidos
             </a>
           </li>
           <li class="nav-item">

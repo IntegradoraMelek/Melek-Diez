@@ -183,8 +183,12 @@ $res2->execute();
             <div class="card scrollflow -slide-top -opacity">
               <img class="card-img-top pointer" src="PanelAdmin/imagenes/<?php echo $imagen['imagen'] ?>">
                 <input type="hidden" id="custId" name="id" value="<?php echo $imagen['id_producto'] ?>">
-                <button type="submit" class="btn btn-primary"><?php echo $imagen['nombre_producto'] ?></button>
-                <button type="submit" class="btn btn-success"><?php echo $imagen['precio_unitario'] ?></button>
+                <form action="pedidos.php">
+                <button type="submit" class="btn btn-block btn-primary"><?php echo $imagen['nombre_producto'] ?></button>
+                </form>
+                <form action="pedidos.php">
+                <button type="submit" class="btn btn-block btn-success"><?php echo $imagen['precio_unitario'] ?></button>
+                </form>
               </form>
             </div>
           </div>
