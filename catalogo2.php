@@ -39,6 +39,8 @@ $res2->execute();
   <link rel="stylesheet" href="CSS PAG/estilos.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="CSS PAG/hover.css">
+  <script src="https://unpkg.com/scrollreveal"></script>
+
   <title>MELEK DIEZ</title>
 
   <style>
@@ -68,7 +70,7 @@ $res2->execute();
 
   <div>
    
-    <header class="header shadow" style="background-image: url('658972.jpg');">
+    <header class="header shadow topnav" style="background-image: url('658972.jpg');">
       <nav id="barra" class="navbar navbar-expand-lg navbar-dark" style="font-size: 20px;">
       <img src="img/logo-melek.png" width="120px">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,21 +78,21 @@ $res2->execute();
         </button>
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
           <ul class="navbar-nav m-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.php">Inicio</a>
-            </li>
             <li class="nav-item">
-              <a class="nav-link" href="catalogo2.php" role="button" aria-haspopup="true" aria-expanded="false">
+              <a id="text" class="nav-link" href="index.php">Inicio</a>
+            </li>
+            <li class="nav-item active">
+              <a id="text" class="nav-link" href="catalogo2.php" role="button" aria-haspopup="true" aria-expanded="false">
                 Catálogo<span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="pedidos.php" role="button" aria-haspopup="true" aria-expanded="false">
+              <a id="text" class="nav-link" href="pedidos.php" role="button" aria-haspopup="true" aria-expanded="false">
                 Pedidos
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contac.php">Ubicacion</a>
+              <a id="text" class="nav-link" href="contac.php">Ubicacion</a>
             </li>
           </ul>
           <?php
@@ -197,5 +199,25 @@ $res2->execute();
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
+<script>
+    window.sr = ScrollReveal();
+    sr.reveal('#bienvenido', {
+      duration: 2000,
+      distance: '300px',
+      origin: 'right'
+    });
+    window.sr = ScrollReveal();
+    sr.reveal('#barra', {
+      duration: 2000,
+      origin: 'top',
+      distance: '300px'
+    });
+    window.sr = ScrollReveal();
+    sr.reveal('#melek', {
+      duration: 2000,
+      origin: 'right',
+      distance: '300px'
+    });
+  </script>
 
 </html>
