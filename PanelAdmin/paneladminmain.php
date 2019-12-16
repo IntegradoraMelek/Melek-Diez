@@ -97,7 +97,7 @@ if (isset($_SESSION['usuario'])) {
               </div>
               <div class="mr-5">Productos</div>
             </div>
-            <a class="card-footer text-white clearfix small z-1" href="#">
+            <a class="card-footer text-white clearfix small z-1" href="tablaadmin.php">
               <span class="float-left">Ver lista</span>
               <span class="float-right">
                 <i class="fas fa-angle-right"></i>
@@ -114,7 +114,7 @@ if (isset($_SESSION['usuario'])) {
                 </div>
                 <div class="mr-5">Categorias</div>
               </div>
-              <a class="card-footer text-white clearfix small z-1" href="#">
+              <a class="card-footer text-white clearfix small z-1" href="tablacategorias.php">
                 <span class="float-left">Ver lista</span>
                 <span class="float-right">
                   <i class="fas fa-angle-right"></i>
@@ -130,7 +130,7 @@ if (isset($_SESSION['usuario'])) {
                 </div>
                 <div class="mr-5">Pedidos</div>
               </div>
-              <a class="card-footer text-white clearfix small z-1" href="#">
+              <a class="card-footer text-white clearfix small z-1" href="tablapedidos.php">
                 <span class="float-left">Ver lista</span>
                 <span class="float-right">
                   <i class="fas fa-angle-right"></i>
@@ -146,7 +146,7 @@ if (isset($_SESSION['usuario'])) {
                 </div>
                 <div class="mr-5">Usuarios</div>
               </div>
-              <a class="card-footer text-white clearfix small z-1" href="#">
+              <a class="card-footer text-white clearfix small z-1" href="tablapedidos.php">
                 <span class="float-left">Ver lista</span>
                 <span class="float-right">
                   <i class="fas fa-angle-right"></i>
