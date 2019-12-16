@@ -118,7 +118,8 @@ if (isset($_SESSION['usuario'])) {
 <div class="form-group">
           <label for="categoria">Busque pedido</label>
           <select name="selectpedido" class="form-control" id="pedido">
-          
+          <option value="" selected disabled hidden>Elija</option>
+
         <?php
 
             while($rows = $res2->fetch(PDO::FETCH_ASSOC))
