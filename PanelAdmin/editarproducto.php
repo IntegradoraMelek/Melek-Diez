@@ -78,7 +78,7 @@ session_start();
            Categorías
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="altacategoria.html">Agegar categorías</a>
+            <a class="dropdown-item" href="registrocategorias.php">Agegar categorías</a>
             <a class="dropdown-item" href="tablacategorias.php">Lista de categorías</a>
         </li>
             <li class="nav-item">
